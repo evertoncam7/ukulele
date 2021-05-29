@@ -164,9 +164,9 @@
 }
  
 .nota-boll{
-    width: 20px;
-    height: 20px;
-    border-radius: 10px;
+    width: 35px;
+    height: 35px;
+    border-radius: 17.5px;
     background: #72b01d;
 }
 
@@ -228,11 +228,19 @@
     cursor: pointer;
 }
 
+.title-n{
+    width: 100%;
+    padding: 10px;
+    color: rgb(136, 255, 0);
+    font-weight: bold;
+}
+
 
 
 /* MODO CELULAR */
 
 @media(max-width: 500px){
+
     .guitar-header-span h1{
         font-size: 1em;
     }
@@ -244,4 +252,5 @@
     .bar{
         font-size: 0.7em;
     }
+
 }

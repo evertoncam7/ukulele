@@ -21,8 +21,6 @@ $(".title-controll").on("click", function(){
         acordes(el);
         $(".a").fadeIn().css({"display":"flex"});
     }
-
-    
     
 });
 
@@ -32,8 +30,9 @@ function acordes(element){
 
     const a = document.createElement("div");
     a.setAttribute("class", "a");
+    a.innerHTML = `<div class='title-n'>MAIOR</div>`;
+    data.maior.map((item) => {
 
-    data.map((item) => {
         const n = document.createElement("div");
         n.setAttribute("class", "n");
         n.setAttribute("id", item);
@@ -45,8 +44,6 @@ function acordes(element){
                 $("#n-"+value).remove();
 
             });
-            // oldStatus = [];
-            
 
             const filter = bd.filter((el) => {
                 return el.acorde == item;
@@ -70,6 +67,7 @@ function acordes(element){
                         nb.addEventListener("click", function(){
                         
                             
+
                         });
 
                     document.getElementById(id).appendChild(nb);
@@ -82,6 +80,7 @@ function acordes(element){
 
         })
         a.appendChild(n);
+
     });
     
     element.appendChild(a);

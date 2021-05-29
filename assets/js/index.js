@@ -1,6 +1,13 @@
 
+$("#main-2-id").scrollLeft(340);
 
-const data = ["C", "C#", "Db", "D", "D#", "Eb", "E", "F" ,"F#", "Gb", "G", "G#", "Ab", "A", "A#", "Bb", "B"];
+
+const data = {
+    maior: ["C", "D", "E", "F", "G", "A", "B"],
+    menor: ["C", "C#", "Db", "D", "D#", "Eb", "E", "F" ,"F#", "Gb", "G", "G#", "Ab", "A", "A#", "Bb", "B"],
+    sustenido: ["C", "C#", "Db", "D", "D#", "Eb", "E", "F" ,"F#", "Gb", "G", "G#", "Ab", "A", "A#", "Bb", "B"],
+    bemol: ["C", "C#", "Db", "D", "D#", "Eb", "E", "F" ,"F#", "Gb", "G", "G#", "Ab", "A", "A#", "Bb", "B"]
+}
 
 let ultimoTraste = 18;
 const tamanhoGradeCasa = [];
@@ -116,15 +123,24 @@ let countCasa = 12;
             column_notas.setAttribute("class", "column_notas");
             column_notas.style.height = hn+"px";
             // hn -= 0.3;
-
+            let countCasas = tamanhoGradeCasa.length;
             tamanhoGradeCasa.map(function(item, index){
 
                 const casa_notas = document.createElement("div");
                 casa_notas.setAttribute("class", "casa_notas");
-                // casa_notas.setAttribute("id", index2+""+index3);
+                casa_notas.setAttribute("id", index2+""+countCasas);
                 casa_notas.style.width = (item+2)+"px";
 
+                casa_notas.addEventListener("click", function(){
+                    alert(this.id);
+                    // alert($("#main-2-id").scrollLeft());
+                })
+
                 column_notas.appendChild(casa_notas);
+                console.log(index2 +" - "+ countCasas);
+                console.log("=====================");
+               
+                countCasas--;
             });
             
             box_notas.appendChild(column_notas);
