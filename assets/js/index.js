@@ -2,11 +2,13 @@
 $("#main-2-id").scrollLeft(340);
 
 
-const data = {
+const dataset = {
     maior: ["C", "D", "E", "F", "G", "A", "B"],
-    menor: ["C", "C#", "Db", "D", "D#", "Eb", "E", "F" ,"F#", "Gb", "G", "G#", "Ab", "A", "A#", "Bb", "B"],
-    sustenido: ["C", "C#", "Db", "D", "D#", "Eb", "E", "F" ,"F#", "Gb", "G", "G#", "Ab", "A", "A#", "Bb", "B"],
-    bemol: ["C", "C#", "Db", "D", "D#", "Eb", "E", "F" ,"F#", "Gb", "G", "G#", "Ab", "A", "A#", "Bb", "B"]
+    menor: ["Cm", "Dm", "Em", "Fm", "Gm", "Am", "Bm"],
+    maiorSustenido: ["C#", "D#", "F#", "G#", "A#"],
+    menorSustenido: ["C#m", "D#m", "F#m", "G#m", "A#m"],
+    maiorBemol: ["Db", "Eb", "Gb", "Ab", "Bb"],
+    menorBemol: ["Dbm", "Ebm", "Gbm", "Abm", "Bbm"]
 }
 
 let ultimoTraste = 18;
@@ -22,7 +24,6 @@ let primeiraCasaNotas = (bracoWidth/100)*3.5;
 const boll = (bracoWidth/100)*1.5;
 
 const container = document.getElementById("bx-braco");
-
 
 const b = document.createElement("div");
 b.style.width = bracoWidth+"px";
@@ -79,8 +80,6 @@ let countCasa = 12;
                 casa.appendChild(mark);
             }
 
-         
-
         const casaCount = document.createElement("div");
         casaCount.setAttribute("class", "casaCount");
         casaCount.innerHTML = countCasa;            
@@ -132,13 +131,13 @@ let countCasa = 12;
                 casa_notas.style.width = (item+2)+"px";
 
                 casa_notas.addEventListener("click", function(){
-                    alert(this.id);
+                    // alert(this.id);
                     // alert($("#main-2-id").scrollLeft());
                 })
 
                 column_notas.appendChild(casa_notas);
-                console.log(index2 +" - "+ countCasas);
-                console.log("=====================");
+                // console.log(index2 +" - "+ countCasas);
+                // console.log("=====================");
                
                 countCasas--;
             });

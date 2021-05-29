@@ -21,19 +21,29 @@ $(".title-controll").on("click", function(){
     el.innerHTML = "";
 
     if (data.category == 'acordes') {
-        acordes(el);
+
+        acordes(el, dataset.maior, "Maior");
+        acordes(el, dataset.menor, "Menor");
+
+        acordes(el, dataset.maiorSustenido, "Maior Sustenido");
+        acordes(el, dataset.menorSustenido, "Menor Sustenido");
+
+        acordes(el, dataset.menorBemol, "Menor Bemol");
+        acordes(el, dataset.menorBemol, "Menor Bemol");
+
+
         $(".a").fadeIn().css({"display":"flex"});
     }
     
 });
 
-function acordes(element){
-
+function acordes(element, data, title){
 
     const a = document.createElement("div");
     a.setAttribute("class", "a");
-    a.innerHTML = `<div class='title-n'>MAIOR</div>`;
-    data.maior.map((item) => {
+    a.innerHTML = `<div class='title-n'>${title}</div>`;
+
+    data.map((item) => {
 
         const n = document.createElement("div");
         n.setAttribute("class", "n");
@@ -88,6 +98,7 @@ function acordes(element){
     });
     
     element.appendChild(a);
+
     return true;
 
 }
