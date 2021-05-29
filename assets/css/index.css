@@ -191,8 +191,7 @@
     padding: 10px ;
     color: #fff;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    overflow: auto;
 }
 
 .box-display{
@@ -204,6 +203,7 @@
     padding: 10px 20px;
     cursor: pointer;
     font-size: 0.9em;
+    margin: auto;
 }
 
 .title-controll:hover{
