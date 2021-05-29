@@ -1,5 +1,8 @@
 
 
+let oldStatus = [];
+
+
 $(".bar").on("click", function(){
 
     if ($(".box-links-instruments").css("display") == "none") {
@@ -26,7 +29,6 @@ $(".title-controll").on("click", function(){
 
 function acordes(element){
 
-    let oldStatus = [];
 
     const a = document.createElement("div");
     a.setAttribute("class", "a");
@@ -50,6 +52,8 @@ function acordes(element){
             });
 
             if (filter.length) {
+
+                $("#container-bx-nota-id").text(filter[0].acorde);
 
                 filter[0].notas.map((value, index) => {
                     

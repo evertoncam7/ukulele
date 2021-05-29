@@ -13,12 +13,9 @@
 }
 
 .bar{
-    width: 100%;
-    height: 40px;
+   
     display: flex;
     align-items: center;
-    padding: 0px 10px;
-    color: #fff;
     cursor: pointer;
 }
 
@@ -56,15 +53,28 @@
     width: 100%;
     display: flex;
     align-items: center;
-    justify-content: center;
-    padding: 30px 0px 50px 0px;
+    justify-content: space-between;
+    padding: 10px 20px;
     color: cornsilk;
 }
 
 .guitar-header-span{
     display: flex;
-    flex-direction: column;
     align-items: center;
+    
+}
+
+.container-bx-nota{
+    width: 100%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container-bx-nota-class{
+    font-size: 2em;
+    color: ivory;
 }
 
 .main{
@@ -250,7 +260,7 @@
     }
 
     .bar{
-        font-size: 0.7em;
+        font-size: 0.9em;
     }
 
 }
