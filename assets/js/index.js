@@ -12,6 +12,7 @@ const dataset = {
 }
 
 const namesCordas = ["G", "C", "E", "A"];
+const namesCordasId = [10, 20, 30, 40];
 
 let ultimoTraste = 18;
 const tamanhoGradeCasa = [];
@@ -135,7 +136,7 @@ let countCasa = 12;
                 casa_notas.style.width = (item+2)+"px";
 
                 casa_notas.addEventListener("click", function(){
-                    alert(this.id);
+                    // alert(this.id);
                     // alert($("#main-2-id").scrollLeft());
                 })
 
@@ -162,7 +163,7 @@ let countCasa = 12;
         const bxNameNotasColumns = document.createElement("div");
         bxNameNotasColumns.setAttribute("class", "bxNameNotasColumns");
         bxNameNotasColumns.style.height = bracoHeight/4+"px";
-        bxNameNotasColumns.innerHTML = value;
+        bxNameNotasColumns.innerHTML = `<div class='nameCordasClass' id="${namesCordasId[index]}">${value}</div>`;
 
         bxNameNotas.appendChild(bxNameNotasColumns);
     });

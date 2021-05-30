@@ -51,6 +51,9 @@ function acordes(element, data, title){
         n.innerHTML = item;
         n.addEventListener("click", function(){
 
+            $(".n").removeClass("actve-button-notas");
+            $(this).addClass("actve-button-notas");
+
             oldStatus.map(function (value, index){
                     
                 $("#n-"+value).remove();
@@ -64,7 +67,7 @@ function acordes(element, data, title){
             if (filter.length) {
 
                 $("#container-bx-nota-id").text(filter[0].acorde);
-
+                $(".nameCordasClass").css("color", "#fff");
                 filter[0].notas.map((value, index) => {
                     
                     const id = value.position;
@@ -80,12 +83,23 @@ function acordes(element, data, title){
 
                         nb.addEventListener("click", function(){
                         
-                            
-
                         });
 
-                    document.getElementById(id).appendChild(nb);
+                        if (value.position != "40" && value.position != "20" && value.position != "30" && value.position != "40") {
+                            document.getElementById(id).appendChild(nb);
+                        }else{
+                            document.getElementById(id).style.color = "#72b01d";
+                        }
 
+                        
+
+                    
+                    
+                    if (value.pointer == 'boll') {
+                        $(".nota-boll").fadeIn();
+                    }else{
+                        $(".nota-ret").fadeIn();
+                    }
                 });
             }
 
