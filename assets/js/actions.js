@@ -28,7 +28,7 @@ $(".title-controll").on("click", function(){
         acordes(el, dataset.maiorSustenido, "Maior Sustenido");
         acordes(el, dataset.menorSustenido, "Menor Sustenido");
 
-        acordes(el, dataset.menorBemol, "Menor Bemol");
+        acordes(el, dataset.maiorBemol, "Maior Bemol");
         acordes(el, dataset.menorBemol, "Menor Bemol");
 
 

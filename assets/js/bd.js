@@ -32,5 +32,15 @@ const bd = [
         {position:'23', pointer:'boll'},
         {position:'14', pointer:'boll'}
     ]},
+    {id:2, acorde:'Cm',scrollEl:370 ,notas:[
+        {position:'43', pointer:'boll'},
+        {position:'33', pointer:'boll'},
+        {position:'23', pointer:'boll'},
+    ]},
+    {id:2, acorde:'Dm',scrollEl:370 ,notas:[
+        {position:'12', pointer:'boll'},
+        {position:'22', pointer:'boll'},
+        {position:'31', pointer:'boll'},
+    ]},
 ];
 

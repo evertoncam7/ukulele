@@ -11,10 +11,12 @@ const dataset = {
     menorBemol: ["Dbm", "Ebm", "Gbm", "Abm", "Bbm"]
 }
 
+const namesCordas = ["G", "C", "E", "A"];
+
 let ultimoTraste = 18;
 const tamanhoGradeCasa = [];
 
-const bracoWidth = 700;
+const bracoWidth = 600;
 const bracoHeight = (bracoWidth/100)*20;
 
 let primeiraCasa = (bracoWidth/100)*5.9;
@@ -29,6 +31,8 @@ const b = document.createElement("div");
 b.style.width = bracoWidth+"px";
 b.style.height = bracoHeight+"px";
 b.setAttribute("class", "b");
+
+
 
     const box_casa = document.createElement("div");
     box_casa.setAttribute("class", "box_casa");
@@ -131,7 +135,7 @@ let countCasa = 12;
                 casa_notas.style.width = (item+2)+"px";
 
                 casa_notas.addEventListener("click", function(){
-                    // alert(this.id);
+                    alert(this.id);
                     // alert($("#main-2-id").scrollLeft());
                 })
 
@@ -148,5 +152,24 @@ let countCasa = 12;
     b.appendChild(box_cordas);
     b.appendChild(box_notas);
 
+
+    const bxNameNotas = document.createElement("div");
+    bxNameNotas.setAttribute("class", "bxNameNotas");
+    bxNameNotas.style.height = bracoHeight+"px";
+
+
+    namesCordas.map(function(value, index){
+        const bxNameNotasColumns = document.createElement("div");
+        bxNameNotasColumns.setAttribute("class", "bxNameNotasColumns");
+        bxNameNotasColumns.style.height = bracoHeight/4+"px";
+        bxNameNotasColumns.innerHTML = value;
+
+        bxNameNotas.appendChild(bxNameNotasColumns);
+    });
+
+
+
+
 container.appendChild(b);
+container.appendChild(bxNameNotas);
 
