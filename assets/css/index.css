@@ -205,10 +205,13 @@
     cursor: pointer;
     font-size: 0.9em;
     margin: auto;
+    font-weight: bold;
 }
 
 .title-controll:hover{
-    color: #ccc;
+    background: #fff;
+    color: #000;
+    font-weight: bold;
 }
 
 .casaCount{
@@ -285,7 +288,7 @@
 
 .clns{
     border-right: 1px solid #ccc;
-    padding: 10px;
+    padding: 10px 40px;
 }
 
 
@@ -328,6 +331,7 @@
     .clns{
         width: 100%;
         border: none;
+        padding: 10px;
     }
 
 }
