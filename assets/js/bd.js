@@ -33,9 +33,9 @@ const bd = [
         {position:'14', pointer:'boll'}
     ]},
     {id:2, acorde:'Cm',scrollEl:370 ,notas:[
-        {position:'43', pointer:'boll'},
-        {position:'33', pointer:'boll'},
-        {position:'23', pointer:'boll'},
+        {position:'43', pointer:'ret'},
+        {position:'33', pointer:'ret'},
+        {position:'23', pointer:'ret'},
     ]},
     {id:2, acorde:'Dm',scrollEl:370 ,notas:[
         {position:'12', pointer:'boll'},
@@ -122,9 +122,9 @@ const bd = [
         {position:'11', pointer:'boll'},
     ]},
     {id:2, acorde:'A#m',scrollEl:370 ,notas:[
-        {position:'41', pointer:'rec'},
-        {position:'31', pointer:'rec'},
-        {position:'21', pointer:'rec'},
+        {position:'41', pointer:'rect'},
+        {position:'31', pointer:'rect'},
+        {position:'21', pointer:'rect'},
         {position:'13', pointer:'boll'},
     ]},
     {id:2, acorde:'Db',scrollEl:370 ,notas:[
@@ -189,3 +189,74 @@ const bd = [
     ]},
 ];
 
+
+const escalasData = [
+    {name:"C", escalas:[
+        {name:"C MAIOR", n:[
+            {name:"", position:""}
+        ]},
+        {name:"C MENOR", n:[
+            {name:"", position:""}
+        ]},
+        {name:"C PENTATÔNICA MAIOR", n:[
+            {name:"", position:""}
+        ]},
+        {name:"C PENTATÔNICA MENOR", n:[
+            {name:"", position:""}
+        ]},
+        {name:"C MENOR HARMÔNICA", n:[
+            {name:"", position:""}
+        ]}
+    ]},
+    {name:"C#", escalas:[
+        {name:"C# MAIOR", n:[
+            {name:"", position:""}
+        ]},
+        {name:"C# MENOR", n:[
+            {name:"", position:""}
+        ]},
+        {name:"C# PENTATÔNICA MAIOR", n:[
+            {name:"", position:""}
+        ]},
+        {name:"C# PENTATÔNICA MENOR", n:[
+            {name:"", position:""}
+        ]},
+        {name:"C# MENOR HARMÔNICA", n:[
+            {name:"", position:""}
+        ]}
+    ]},
+    {name:"D", escalas:[
+        {name:"D MAIOR", n:[
+            {name:"", position:""}
+        ]},
+        {name:"D MENOR", n:[
+            {name:"", position:""}
+        ]},
+        {name:"D PENTATÔNICA MAIOR", n:[
+            {name:"", position:""}
+        ]},
+        {name:"D PENTATÔNICA MENOR", n:[
+            {name:"", position:""}
+        ]},
+        {name:"D MENOR HARMÔNICA", n:[
+            {name:"", position:""}
+        ]}
+    ]},
+    {name:"D#", escalas:[
+        {name:"D# - MAIOR", n:[
+            {name:"", position:""}
+        ]},
+        {name:"D# - MENOR", n:[
+            {name:"", position:""}
+        ]},
+        {name:"D# - PENTATÔNICA MAIOR", n:[
+            {name:"", position:""}
+        ]},
+        {name:"D# - PENTATÔNICA MENOR", n:[
+            {name:"", position:""}
+        ]},
+        {name:"D# - MENOR HARMÔNICA", n:[
+            {name:"", position:""}
+        ]}
+    ]},
+];

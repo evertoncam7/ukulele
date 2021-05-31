@@ -16,6 +16,9 @@ $(".bar").on("click", function(){
 
 $(".title-controll").on("click", function(){
 
+    $(".title-controll").removeClass("active-button-controll");
+    $(this).addClass("active-button-controll");
+
     const data = $(this).data();
     const el = document.getElementById("box-display-id");
     el.innerHTML = "";
@@ -33,6 +36,16 @@ $(".title-controll").on("click", function(){
 
 
         $(".a").fadeIn().css({"display":"flex"});
+
+    }else if(data.category == 'escalas'){
+        const bxColumns = document.createElement("div");
+        bxColumns.setAttribute("class", "bxColumns");
+
+        escalasData.map(function(value, index){
+            escala(bxColumns, value);
+        });
+
+        el.appendChild(bxColumns);
     }
     
 });
@@ -77,7 +90,7 @@ function acordes(element, data, title){
                         if (value.pointer == 'boll') {
                             nb.setAttribute("class", "nota-boll");
                         }else{
-                            nb.setAttribute("class", "nota-ret");
+                            nb.setAttribute("class", "nota-rect");
                         }
                         nb.setAttribute("id", "n-"+id);
 
@@ -90,15 +103,11 @@ function acordes(element, data, title){
                         }else{
                             document.getElementById(id).style.color = "#72b01d";
                         }
-
-                        
-
-                    
                     
                     if (value.pointer == 'boll') {
                         $(".nota-boll").fadeIn();
                     }else{
-                        $(".nota-ret").fadeIn();
+                        $(".nota-rect").fadeIn();
                     }
                 });
             }
