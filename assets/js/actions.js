@@ -16,6 +16,12 @@ $(".bar").on("click", function(){
 
 $(".title-controll").on("click", function(){
 
+    $("#container-bx-nota-id").text("");
+
+    oldState.scale.map(function(value, index){
+        $("#s-"+value).remove();
+    });
+
     $(".title-controll").removeClass("active-button-controll");
     $(this).addClass("active-button-controll");
 
@@ -38,6 +44,7 @@ $(".title-controll").on("click", function(){
         $(".a").fadeIn().css({"display":"flex"});
 
     }else if(data.category == 'escalas'){
+
         const bxColumns = document.createElement("div");
         bxColumns.setAttribute("class", "bxColumns");
 
@@ -46,6 +53,7 @@ $(".title-controll").on("click", function(){
         });
 
         el.appendChild(bxColumns);
+        $(".bxColumns").fadeIn().css({"display":"flex"});
     }
     
 });
@@ -80,6 +88,8 @@ function acordes(element, data, title){
             if (filter.length) {
 
                 $("#container-bx-nota-id").text(filter[0].acorde);
+                $("#container-bx-nota-id").css({fontSize:"1.5em"});
+                
                 $(".nameCordasClass").css("color", "#fff");
                 filter[0].notas.map((value, index) => {
                     

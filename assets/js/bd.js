@@ -192,53 +192,84 @@ const bd = [
 
 const escalasData = [
     {name:"C", escalas:[
-        {name:"C MAIOR", n:[
+        {name:"C - MAIOR", n:[
+            {name:"A", position: 12},
+            {name:"B", position: 14},
+            {name:"C", position: 15},
+            {name:"D", position: 17},
+            {name:"E", position: 19},
+            {name:"F", position: 110},
+            {name:"G", position: 112},
+
+            {name:"D", position: 22},
+            {name:"E", position: 24},
+            {name:"F", position: 25},
+            {name:"G", position: 27},
+            {name:"A", position: 29},
+            {name:"B", position: 211},
+            {name:"C", position: 212},
+
+            {name:"F", position: 31},
+            {name:"G", position: 33},
+            {name:"A", position: 35},
+            {name:"B", position: 37},
+            {name:"C", position: 38},
+            {name:"D", position: 310},
+            {name:"E", position: 312},
+
+            {name:"B", position: 42},
+            {name:"C", position: 43},
+            {name:"D", position: 45},
+            {name:"E", position: 47},
+            {name:"F", position: 48},
+            {name:"G", position: 410},
+            {name:"A", position: 412},
+
+        ]},
+        {name:"C - MENOR", n:[
             {name:"", position:""}
         ]},
-        {name:"C MENOR", n:[
+        {name:"C - PENTATÔNICA MAIOR", n:[
             {name:"", position:""}
         ]},
-        {name:"C PENTATÔNICA MAIOR", n:[
+        {name:"C - PENTATÔNICA MENOR", n:[
             {name:"", position:""}
         ]},
-        {name:"C PENTATÔNICA MENOR", n:[
+        {name:"C - MENOR HARMÔNICA", n:[
             {name:"", position:""}
         ]},
-        {name:"C MENOR HARMÔNICA", n:[
-            {name:"", position:""}
-        ]}
     ]},
     {name:"C#", escalas:[
-        {name:"C# MAIOR", n:[
+        {name:"C# - MAIOR", n:[
             {name:"", position:""}
         ]},
-        {name:"C# MENOR", n:[
+        {name:"C# - MENOR", n:[
             {name:"", position:""}
         ]},
-        {name:"C# PENTATÔNICA MAIOR", n:[
+        {name:"C# - PENTATÔNICA MAIOR", n:[
             {name:"", position:""}
         ]},
-        {name:"C# PENTATÔNICA MENOR", n:[
+        {name:"C# - PENTATÔNICA MENOR", n:[
             {name:"", position:""}
         ]},
-        {name:"C# MENOR HARMÔNICA", n:[
+        {name:"C# - MENOR HARMÔNICA", n:[
             {name:"", position:""}
         ]}
     ]},
     {name:"D", escalas:[
-        {name:"D MAIOR", n:[
+        {name:"D - MAIOR", n:[
             {name:"", position:""}
         ]},
-        {name:"D MENOR", n:[
+        {name:"D - MENOR", n:[
             {name:"", position:""}
         ]},
-        {name:"D PENTATÔNICA MAIOR", n:[
+        {name:"D - PENTATÔNICA MAIOR", n:[
             {name:"", position:""}
         ]},
-        {name:"D PENTATÔNICA MENOR", n:[
+        {name:"D - PENTATÔNICA MENOR", n:[
             {name:"", position:""}
         ]},
-        {name:"D MENOR HARMÔNICA", n:[
+        {name:"D - MENOR HARMÔNICA", n:[
             {name:"", position:""}
         ]}
     ]},
@@ -256,6 +287,142 @@ const escalasData = [
             {name:"", position:""}
         ]},
         {name:"D# - MENOR HARMÔNICA", n:[
+            {name:"", position:""}
+        ]}
+    ]},
+    {name:"E", escalas:[
+        {name:"E - MAIOR", n:[
+            {name:"", position:""}
+        ]},
+        {name:"E - MENOR", n:[
+            {name:"", position:""}
+        ]},
+        {name:"E - PENTATÔNICA MAIOR", n:[
+            {name:"", position:""}
+        ]},
+        {name:"E - PENTATÔNICA MENOR", n:[
+            {name:"", position:""}
+        ]},
+        {name:"E - MENOR HARMÔNICA", n:[
+            {name:"", position:""}
+        ]}
+    ]},
+    {name:"F", escalas:[
+        {name:"F - MAIOR", n:[
+            {name:"", position:""}
+        ]},
+        {name:"F - MENOR", n:[
+            {name:"", position:""}
+        ]},
+        {name:"F - PENTATÔNICA MAIOR", n:[
+            {name:"", position:""}
+        ]},
+        {name:"F - PENTATÔNICA MENOR", n:[
+            {name:"", position:""}
+        ]},
+        {name:"F - MENOR HARMÔNICA", n:[
+            {name:"", position:""}
+        ]}
+    ]},
+    {name:"F#", escalas:[
+        {name:"F# - MAIOR", n:[
+            {name:"", position:""}
+        ]},
+        {name:"F# - MENOR", n:[
+            {name:"", position:""}
+        ]},
+        {name:"F# - PENTATÔNICA MAIOR", n:[
+            {name:"", position:""}
+        ]},
+        {name:"F# - PENTATÔNICA MENOR", n:[
+            {name:"", position:""}
+        ]},
+        {name:"F# - MENOR HARMÔNICA", n:[
+            {name:"", position:""}
+        ]}
+    ]},
+    {name:"G", escalas:[
+        {name:"G - MAIOR", n:[
+            {name:"", position:""}
+        ]},
+        {name:"G - MENOR", n:[
+            {name:"", position:""}
+        ]},
+        {name:"G - PENTATÔNICA MAIOR", n:[
+            {name:"", position:""}
+        ]},
+        {name:"G - PENTATÔNICA MENOR", n:[
+            {name:"", position:""}
+        ]},
+        {name:"G - MENOR HARMÔNICA", n:[
+            {name:"", position:""}
+        ]}
+    ]},
+    {name:"G#", escalas:[
+        {name:"G# - MAIOR", n:[
+            {name:"", position:""}
+        ]},
+        {name:"G# - MENOR", n:[
+            {name:"", position:""}
+        ]},
+        {name:"G# - PENTATÔNICA MAIOR", n:[
+            {name:"", position:""}
+        ]},
+        {name:"G# - PENTATÔNICA MENOR", n:[
+            {name:"", position:""}
+        ]},
+        {name:"G# - MENOR HARMÔNICA", n:[
+            {name:"", position:""}
+        ]}
+    ]},
+    {name:"A", escalas:[
+        {name:"A - MAIOR", n:[
+            {name:"", position:""}
+        ]},
+        {name:"A - MENOR", n:[
+            {name:"", position:""}
+        ]},
+        {name:"A - PENTATÔNICA MAIOR", n:[
+            {name:"", position:""}
+        ]},
+        {name:"A - PENTATÔNICA MENOR", n:[
+            {name:"", position:""}
+        ]},
+        {name:"A - MENOR HARMÔNICA", n:[
+            {name:"", position:""}
+        ]}
+    ]},
+    {name:"A#", escalas:[
+        {name:"A# - MAIOR", n:[
+            {name:"", position:""}
+        ]},
+        {name:"A# - MENOR", n:[
+            {name:"", position:""}
+        ]},
+        {name:"A# - PENTATÔNICA MAIOR", n:[
+            {name:"", position:""}
+        ]},
+        {name:"A# - PENTATÔNICA MENOR", n:[
+            {name:"", position:""}
+        ]},
+        {name:"A# - MENOR HARMÔNICA", n:[
+            {name:"", position:""}
+        ]}
+    ]},
+    {name:"B", escalas:[
+        {name:"B - MAIOR", n:[
+            {name:"", position:""}
+        ]},
+        {name:"B - MENOR", n:[
+            {name:"", position:""}
+        ]},
+        {name:"B - PENTATÔNICA MAIOR", n:[
+            {name:"", position:""}
+        ]},
+        {name:"B - PENTATÔNICA MENOR", n:[
+            {name:"", position:""}
+        ]},
+        {name:"B - MENOR HARMÔNICA", n:[
             {name:"", position:""}
         ]}
     ]},

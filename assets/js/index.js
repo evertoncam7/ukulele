@@ -2,6 +2,12 @@
 $("#main-2-id").scrollLeft(340);
 
 
+const oldState = {
+    scale:[]
+};
+const newState = {};
+
+
 const dataset = {
     maior: ["C", "D", "E", "F", "G", "A", "B"],
     menor: ["Cm", "Dm", "Em", "Fm", "Gm", "Am", "Bm"],

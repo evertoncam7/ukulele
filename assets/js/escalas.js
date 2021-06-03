@@ -1,8 +1,13 @@
 
 
-
 function escala(element, dataSet){
 
+    
+
+    $("#container-bx-nota-id").text(" ");
+    oldStatus.map(function (value, index){
+        $("#n-"+value).remove();
+    });
     
     const clns = document.createElement("div");
     clns.setAttribute("class", "clns");
@@ -14,12 +19,61 @@ function escala(element, dataSet){
         clns.appendChild(clnsTitle);
 
     dataSet.escalas.map(function(value, index){
+
         const clnsText = document.createElement("div");
         clnsText.setAttribute("class", "clnsText");
+        clnsText.setAttribute("data-tom", dataSet.name);
+        clnsText.setAttribute("data-escala", value.name);
         clnsText.innerHTML = value.name;
         clnsText.addEventListener("click", function(){
-            alert(value.name);
-        })
+
+            oldState.scale.map(function(value, index){
+                $("#s-"+value).remove();
+            });
+
+            oldState.scale = [];
+
+            const tom = escalasData.filter(function(value){
+                return value.name == dataSet.name;
+            });
+
+            const scale = tom[0].escalas.filter(function(valuee){
+                return value.name == valuee.name;
+            });
+
+          
+
+            if (scale) {
+                scale[0].n.map(function(value, index){
+
+                    $("#container-bx-nota-id").text(scale[0].name);
+                    $("#container-bx-nota-id").css({fontSize:"1.1em"});
+
+                    if (!value.name || !value.position) {
+                        return;
+                    }
+
+                    oldState.scale.push(value.position);
+    
+                    const bScale = document.createElement("div");
+                    bScale.setAttribute("class", "nota-boll");
+                    bScale.setAttribute("id", "s-"+value.position);
+                    bScale.innerHTML = value.name;
+    
+                    console.log(value.position);
+                    document.getElementById(value.position).appendChild(bScale);
+                    $(".nota-boll").fadeIn().css('display','flex');
+                    
+    
+                });
+            }
+
+            
+
+            console.log(oldState.scale);
+
+        });
+
         clns.appendChild(clnsText);
     });
     
@@ -28,6 +82,7 @@ function escala(element, dataSet){
 
     console.log(dataSet);
     console.log("=================");
+
 }
 
 

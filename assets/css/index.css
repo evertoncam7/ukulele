@@ -168,10 +168,15 @@
 .nota-boll{
     width: 30px;
     height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     border-radius: 15px;
     background: #72b01d;
     display: none;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    color: #fff;
+    font-weight: bold;
 }
 
 .nota-rect{
@@ -284,17 +289,17 @@
     width: 100%;
     display: flex;
     flex-wrap: wrap;
+    display: none;
 }
 
 .clns{
-    border-right: 1px solid #ccc;
-    padding: 10px 40px;
+    padding: 10px 30px;
 }
 
 
 .clnsTitle{
     padding: 5px 10px;
-    background: rgb(114, 114, 114);
+    background: rgb(160, 160, 160);
     color: #fff;
     font-size: 1.2em;
     margin-bottom: 5px;
@@ -304,6 +309,13 @@
     color: #fff;
     padding: 10px 0px;
     font-size: 0.9em;
+    padding: 10px;
+}
+
+.clnsText:hover{
+    background: #fff;
+    color: #000;
+    cursor: pointer;
 }
 
 
@@ -327,7 +339,6 @@
         font-size: 0.9em;
     }
 
-
     .clns{
         width: 100%;
         border: none;
@@ -335,6 +346,7 @@
     }
 
 }
+
 
 .clns:last-child{
     border: none;
