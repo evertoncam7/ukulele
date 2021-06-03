@@ -26,6 +26,8 @@ function escala(element, dataSet){
         clnsText.innerHTML = value.name;
         clnsText.addEventListener("click", function(){
 
+            console.log(value);
+
             oldState.scale.map(function(value, index){
                 $("#s-"+value).remove();
             });
@@ -59,6 +61,18 @@ function escala(element, dataSet){
                     bScale.setAttribute("id", "s-"+value.position);
                     bScale.dataset.t = "dwwdwd";
                     bScale.innerHTML = value.name;
+                    bScale.addEventListener("click", function(){
+
+                      
+
+                        const el = document.getElementById("main-2-id");
+
+                        $("#main-2-id").animate({scrollLeft: value.scroll }, 500, function(){
+                            
+                        });
+
+                        console.log(el.scrollLeft);
+                    });
     
                     document.getElementById(value.position).appendChild(bScale);
                     $(".nota-boll").fadeIn().css('display','flex');

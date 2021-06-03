@@ -87,6 +87,8 @@ function acordes(element, data, title){
         n.innerHTML = item;
         n.addEventListener("click", function(){
 
+            
+
             $(".n").removeClass("actve-button-notas");
             $(this).addClass("actve-button-notas");
 
@@ -112,6 +114,13 @@ function acordes(element, data, title){
 
                 // $(".textPos").removeClass("activePos");
                 
+                
+                console.log("");
+                // Ao clicar o scroll vai a posição desejada
+
+                $("#main-2-id").animate({scrollLeft: filter[0].notas[0].scroll }, 500, function(){
+                            
+                });
 
                 filter[0].notas[0].n.map(function(value, index){
                     button(value, index);
@@ -119,7 +128,7 @@ function acordes(element, data, title){
 
 
                 filter[0].notas.map((value, index) => {
-                    console.log(value);
+                    
 
                     const textPos = document.createElement("div");
                     textPos.setAttribute("class", "textPos");
@@ -133,7 +142,16 @@ function acordes(element, data, title){
                             $("#n-"+value).remove();
                         });
 
+                        console.log(value);
+                        console.log("v2");
+                        $("#main-2-id").animate({scrollLeft: value.scroll }, 500, function(){
+                            
+                        });
+
                         value.n.map(function(value, index){
+
+                            console.log(value);
+                            console.log("true");
 
                             button(value, index);
 
@@ -146,7 +164,7 @@ function acordes(element, data, title){
                 });
 
                 $(".textPos").eq(0).addClass("activePos");
-                console.log($(".textPos").eq(0));
+               
             }
 
             const elMain = document.getElementById("main-2-id");
@@ -165,6 +183,9 @@ function acordes(element, data, title){
 
 function button(value, index){
 
+    console.log(value);
+    console.log("id");
+
     const id = value.position;
     oldStatus.push(id);
 
@@ -177,7 +198,10 @@ function button(value, index){
     nb.setAttribute("id", "n-"+id);
 
     nb.addEventListener("click", function(){
-    
+        
+        const scl = $("#main-2-id").scrollLeft();
+        alert(scl);
+
     });
 
     if (value.position != "40" && value.position != "20" && value.position != "30" && value.position != "40") {

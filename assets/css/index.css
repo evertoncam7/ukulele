@@ -84,7 +84,6 @@
 }
 
 .main-2{
-    
     overflow: auto;
 }
 
@@ -318,11 +317,12 @@
 
 
 .clnsTitle{
-    padding: 5px 10px;
+    padding: 10px;
     background: #7f0799;
     color: #fff;
-    font-size: 1.2em;
+    font-size: 1.1em;
     margin-bottom: 5px;
+    font-weight: bold;
 }
 
 .clnsText{

@@ -1,26 +1,58 @@
 
+
+function converte(dd){
+
+    const r = dd.map((value, index) => {
+
+        const i = parseInt(value.position);
+        const res = {position:i, pointer:"boll"};
+        // console.log(res);
+        return res;
+
+    });
+
+    return r;
+
+}
+
+// const vc = [{"position":"12","pointer":"boll"},{"position":"22","pointer":"boll"},{"position":"32","pointer":"boll"},{"position":"45","pointer":"boll"}];
+// console.log(...converte(vc));
+
+
 const bd = [
-    {id:1, acorde:'C',scrollEl:370, notas:[
-        {pos:1, n:[
+    {id:1, acorde:'C',scrollEl: 240, notas:[
+        {pos:1, scroll: 216, n:[
             {position: 43, pointer:"boll"}
         ]}, 
-        {pos:2, n:[
+        {pos:2, scroll: 178, n:[
             {position:24, pointer:"boll"},{position:43, pointer:"boll"}
         ]},
-        {pos:3, n:[
+        {pos:3, scroll: 10, n:[
             {position: 47, pointer:"boll"}
         ]},
-        {pos:4, n:[
+        {pos:4, scroll: 195, n:[
             {position:24, pointer:"boll"},{position:33, pointer:"boll"},{position: 43, pointer:"boll"}
         ]},
-        {pos:5, n:[
+        {pos:5, scroll: 125, n:[
             {position: 33, pointer:"boll"},{ position: 47, pointer:"boll"}
         ]},
     ]},
     {id:2, acorde:'D',scrollEl:370 ,notas:[
-        {position:'12', pointer:'boll'},
-        {position:'22', pointer:'boll'},
-        {position:'32', pointer:'boll'}
+        {pos:1, scroll: 240, n:[
+            {position: 12, pointer:"boll"},{ position :22, pointer :"boll"},{ position : 32 , pointer :"boll"}
+        ]}, 
+        {pos:2, scroll: 178, n:[
+            ...converte([{"position":"12","pointer":"boll"},{"position":"22","pointer":"boll"},{"position":"32","pointer":"boll"},{"position":"45","pointer":"boll"}])
+        ]},
+        {pos:3, scroll: 10, n:[
+            {position: 47, pointer:"boll"}
+        ]},
+        {pos:4, scroll: 195, n:[
+            {position:24, pointer:"boll"},{position:33, pointer:"boll"},{position: 43, pointer:"boll"}
+        ]},
+        {pos:5, scroll: 125, n:[
+            {position: 33, pointer:"boll"},{ position: 47, pointer:"boll"}
+        ]},
     ]},
     {id:2, acorde:'E',scrollEl:370 ,notas:[
         {position:'11', pointer:'boll'},
