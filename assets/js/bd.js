@@ -5,7 +5,7 @@ function converte(dd){
     const r = dd.map((value, index) => {
 
         const i = parseInt(value.position);
-        const res = {position:i, pointer:"boll"};
+        const res = {position:i, pointer:"boll", nota: value.nota};
         // console.log(res);
         return res;
 
@@ -15,43 +15,39 @@ function converte(dd){
 
 }
 
-// const vc = [{"position":"12","pointer":"boll"},{"position":"22","pointer":"boll"},{"position":"32","pointer":"boll"},{"position":"45","pointer":"boll"}];
-// console.log(...converte(vc));
-
-
 const bd = [
     {id:1, acorde:'C',scrollEl: 240, notas:[
         {pos:1, scroll: 216, n:[
-            {position: 43, pointer:"boll"}
+            ...converte([{"position":"43","pointer":"boll","nota":"C"}])
         ]}, 
         {pos:2, scroll: 178, n:[
-            {position:24, pointer:"boll"},{position:43, pointer:"boll"}
+            ...converte([{"position":"24","pointer":"boll","nota":"E"},{"position":"43","pointer":"boll","nota":"C"}])
         ]},
         {pos:3, scroll: 10, n:[
-            {position: 47, pointer:"boll"}
+            ...converte([{"position":"47","pointer":"boll","nota":"E"}])
         ]},
         {pos:4, scroll: 195, n:[
-            {position:24, pointer:"boll"},{position:33, pointer:"boll"},{position: 43, pointer:"boll"}
+            ...converte([{"position":"24","pointer":"boll","nota":"E"},{"position":"33","pointer":"boll","nota":"G"},{"position":"43","pointer":"boll","nota":"C"}])
         ]},
         {pos:5, scroll: 125, n:[
-            {position: 33, pointer:"boll"},{ position: 47, pointer:"boll"}
+            ...converte([{"position":"33","pointer":"boll","nota":"G"},{"position":"47","pointer":"boll","nota":"E"}])
         ]},
     ]},
     {id:2, acorde:'D',scrollEl:370 ,notas:[
         {pos:1, scroll: 240, n:[
-            {position: 12, pointer:"boll"},{ position :22, pointer :"boll"},{ position : 32 , pointer :"boll"}
+            ...converte([{"position":"12","pointer":"boll","nota":"A"},{"position":"22","pointer":"boll","nota":"D"},{"position":"32","pointer":"boll","nota":"F#"}])
         ]}, 
-        {pos:2, scroll: 178, n:[
-            ...converte([{"position":"12","pointer":"boll"},{"position":"22","pointer":"boll"},{"position":"32","pointer":"boll"},{"position":"45","pointer":"boll"}])
+        {pos:2, scroll: 203, n:[
+            ...converte([{"position":"12","pointer":"boll","nota":"A"},{"position":"22","pointer":"boll","nota":"D"},{"position":"32","pointer":"boll","nota":"F#"},{"position":"45","pointer":"boll","nota":"D"}])
         ]},
-        {pos:3, scroll: 10, n:[
-            {position: 47, pointer:"boll"}
+        {pos:3, scroll: 184, n:[
+            ...converte([{"position":"12","pointer":"boll","nota":"A"},{"position":"26","pointer":"boll","nota":"F#"},{"position":"32","pointer":"boll","nota":"F#"},{"position":"45","pointer":"boll","nota":"D"}])
         ]},
         {pos:4, scroll: 195, n:[
-            {position:24, pointer:"boll"},{position:33, pointer:"boll"},{position: 43, pointer:"boll"}
+            ...converte([{"position":"12","pointer":"boll","nota":"A"},{"position":"26","pointer":"boll","nota":"F#"},{"position":"35","pointer":"boll","nota":"A"},{"position":"45","pointer":"boll","nota":"D"}])
         ]},
-        {pos:5, scroll: 125, n:[
-            {position: 33, pointer:"boll"},{ position: 47, pointer:"boll"}
+        {pos:5, scroll: 69, n:[
+            ...converte([{"position":"17","pointer":"boll","nota":"D"},{"position":"26","pointer":"boll","nota":"F#"},{"position":"35","pointer":"boll","nota":"A"}])
         ]},
     ]},
     {id:2, acorde:'E',scrollEl:370 ,notas:[

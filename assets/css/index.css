@@ -178,6 +178,11 @@
     font-weight: bold;
 }
 
+.nota-boll-tom{
+    border: 2px solid #9609b6;
+    /* color: #9609b6; */
+}
+
 .nota-rect{
     width: 20px;
     height: 100%;
@@ -243,12 +248,12 @@
     padding: 7px 20px;
 }
 
-.n:hover{
+/* .n:hover{
     background: cornsilk;
     color: #111;
     font-weight: bold;
     cursor: pointer;
-}
+} */
 
 .title-nb{
     width: 100%;
@@ -292,8 +297,8 @@
 } 
 
 .actve-button-notas{
-    background: #fff;
-    color: black;
+    background: #555;
+    color: #fff;
 }
 
 .active-button-controll{

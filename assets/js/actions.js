@@ -114,8 +114,8 @@ function acordes(element, data, title){
 
                 // $(".textPos").removeClass("activePos");
                 
-                
-                console.log("");
+                console.log(filter[0].acorde);
+                console.log("TOM ========");
                 // Ao clicar o scroll vai a posição desejada
 
                 $("#main-2-id").animate({scrollLeft: filter[0].notas[0].scroll }, 500, function(){
@@ -123,7 +123,7 @@ function acordes(element, data, title){
                 });
 
                 filter[0].notas[0].n.map(function(value, index){
-                    button(value, index);
+                    button(value, index, filter[0].acorde);
                 });
 
 
@@ -153,7 +153,7 @@ function acordes(element, data, title){
                             console.log(value);
                             console.log("true");
 
-                            button(value, index);
+                            button(value, index,filter[0].acorde);
 
                         });
                     })
@@ -181,7 +181,7 @@ function acordes(element, data, title){
 
 }
 
-function button(value, index){
+function button(value, index, tom){
 
     console.log(value);
     console.log("id");
@@ -190,12 +190,15 @@ function button(value, index){
     oldStatus.push(id);
 
     const nb = document.createElement("div");
-    if (value.pointer == 'boll') {
+    if (value.pointer == 'boll' && tom == value.nota) {
+        nb.setAttribute("class", "nota-boll nota-boll-tom");
+    }else if(value.pointer == 'boll') {
         nb.setAttribute("class", "nota-boll");
     }else{
         nb.setAttribute("class", "nota-rect");
     }
     nb.setAttribute("id", "n-"+id);
+    nb.innerHTML = value.nota;
 
     nb.addEventListener("click", function(){
         
@@ -211,7 +214,7 @@ function button(value, index){
     }
     
     if (value.pointer == 'boll') {
-        $(".nota-boll").fadeIn();
+        $(".nota-boll").fadeIn().css({"display":"flex"});
     }else{
         $(".nota-rect").fadeIn();
     }

@@ -41,7 +41,7 @@ $(".control", function(){
                 // sc.push({name:notas, position:position});
 
                 // Para Acordes
-                sc.push({position:position, pointer:"boll"});
+                sc.push({position:position, pointer:"boll", nota:notas});
             }
     
     
