@@ -250,8 +250,11 @@
 .title-n{
     width: 100%;
     padding: 10px;
-    color: rgb(136, 255, 0);
+    color: #fff;
     font-weight: bold;
+    font-size: 1.1em;
+    background: #7f0799;
+    margin-bottom: 10px;
 }
 
 .bxNameNotas{
@@ -299,7 +302,7 @@
 
 .clnsTitle{
     padding: 5px 10px;
-    background: rgb(160, 160, 160);
+    background: #7f0799;
     color: #fff;
     font-size: 1.2em;
     margin-bottom: 5px;
