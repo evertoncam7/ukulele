@@ -62,7 +62,22 @@ function acordes(element, data, title){
 
     const a = document.createElement("div");
     a.setAttribute("class", "a");
-    a.innerHTML = `<div class='title-n'>${title}</div>`;
+
+        const atb = document.createElement("div");
+        atb.setAttribute("class", "title-nb");
+
+            const at = document.createElement("div");
+            at.setAttribute("class", "title-n");
+            at.innerHTML = title;
+
+            const ap = document.createElement("div");
+            ap.setAttribute("class", "ap");
+            ap.setAttribute("id", "id_positions");
+
+            atb.appendChild(at);
+            atb.appendChild(ap);
+
+    a.appendChild(atb);
 
     data.map((item) => {
 
@@ -91,35 +106,47 @@ function acordes(element, data, title){
                 $("#container-bx-nota-id").css({fontSize:"1.5em"});
                 
                 $(".nameCordasClass").css("color", "#fff");
+
+                document.getElementById("id_positions").innerHTML = "";
+
+
+                // $(".textPos").removeClass("activePos");
+                
+
+                filter[0].notas[0].n.map(function(value, index){
+                    button(value, index);
+                });
+
+
                 filter[0].notas.map((value, index) => {
-                    
-                    const id = value.position;
-                    oldStatus.push(id);
+                    console.log(value);
 
-                        const nb = document.createElement("div");
-                        if (value.pointer == 'boll') {
-                            nb.setAttribute("class", "nota-boll");
-                        }else{
-                            nb.setAttribute("class", "nota-rect");
-                        }
-                        nb.setAttribute("id", "n-"+id);
+                    const textPos = document.createElement("div");
+                    textPos.setAttribute("class", "textPos");
+                    textPos.innerHTML = value.pos;
+                    textPos.addEventListener("click", function(){
 
-                        nb.addEventListener("click", function(){
-                        
+                        $(".textPos").removeClass("activePos");
+                        $(this).addClass("activePos");
+
+                        oldStatus.map(function (value, index){
+                            $("#n-"+value).remove();
                         });
 
-                        if (value.position != "40" && value.position != "20" && value.position != "30" && value.position != "40") {
-                            document.getElementById(id).appendChild(nb);
-                        }else{
-                            document.getElementById(id).style.color = "#72b01d";
-                        }
+                        value.n.map(function(value, index){
+
+                            button(value, index);
+
+                        });
+                    })
+
+                    ap.appendChild(textPos);
                     
-                    if (value.pointer == 'boll') {
-                        $(".nota-boll").fadeIn();
-                    }else{
-                        $(".nota-rect").fadeIn();
-                    }
+                    
                 });
+
+                $(".textPos").eq(0).addClass("activePos");
+                console.log($(".textPos").eq(0));
             }
 
             const elMain = document.getElementById("main-2-id");
@@ -134,6 +161,36 @@ function acordes(element, data, title){
 
     return true;
 
+}
+
+function button(value, index){
+
+    const id = value.position;
+    oldStatus.push(id);
+
+    const nb = document.createElement("div");
+    if (value.pointer == 'boll') {
+        nb.setAttribute("class", "nota-boll");
+    }else{
+        nb.setAttribute("class", "nota-rect");
+    }
+    nb.setAttribute("id", "n-"+id);
+
+    nb.addEventListener("click", function(){
+    
+    });
+
+    if (value.position != "40" && value.position != "20" && value.position != "30" && value.position != "40") {
+        document.getElementById(id).appendChild(nb);
+    }else{
+        document.getElementById(id).style.color = "#72b01d";
+    }
+    
+    if (value.pointer == 'boll') {
+        $(".nota-boll").fadeIn();
+    }else{
+        $(".nota-rect").fadeIn();
+    }
 }
 
 // $("body").on("click", ".n", function(){

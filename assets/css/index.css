@@ -235,6 +235,10 @@
     display: none;
 }
 
+.ap{
+    display: flex;
+}
+
 .n{
     color: #fff;
     padding: 7px 20px;
@@ -247,14 +251,27 @@
     cursor: pointer;
 }
 
-.title-n{
+.title-nb{
     width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     padding: 10px;
     color: #fff;
     font-weight: bold;
     font-size: 1.1em;
     background: #7f0799;
     margin-bottom: 10px;
+}
+
+.textPos{
+    padding: 2px 10px;
+    font-size: 0.9em;
+}
+
+.activePos{
+    background: #9609b6;
+    padding: 2px 10px;
 }
 
 .bxNameNotas{
