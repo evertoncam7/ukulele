@@ -102,21 +102,13 @@ function acordes(element, data, title){
                 return el.acorde == item;
             });
 
+
             if (filter.length) {
 
                 $("#container-bx-nota-id").text(filter[0].acorde);
                 $("#container-bx-nota-id").css({fontSize:"1.5em"});
                 
                 $(".nameCordasClass").css("color", "#fff");
-
-                document.getElementById("id_positions").innerHTML = "";
-
-
-                // $(".textPos").removeClass("activePos");
-                
-                console.log(filter[0].acorde);
-                console.log("TOM ========");
-                // Ao clicar o scroll vai a posição desejada
 
                 $("#main-2-id").animate({scrollLeft: filter[0].notas[0].scroll }, 500, function(){
                             
@@ -126,6 +118,8 @@ function acordes(element, data, title){
                     button(value, index, filter[0].acorde);
                 });
 
+                // document.getElementById("id_positions").innerHTML = "";
+                ap.innerHTML = "";
 
                 filter[0].notas.map((value, index) => {
                     
@@ -135,6 +129,8 @@ function acordes(element, data, title){
                     textPos.innerHTML = value.pos;
                     textPos.addEventListener("click", function(){
 
+                        $(".nameCordasClass").css("color", "#fff");
+
                         $(".textPos").removeClass("activePos");
                         $(this).addClass("activePos");
 
@@ -142,22 +138,19 @@ function acordes(element, data, title){
                             $("#n-"+value).remove();
                         });
 
-                        console.log(value);
-                        console.log("v2");
+                   
                         $("#main-2-id").animate({scrollLeft: value.scroll }, 500, function(){
                             
                         });
 
                         value.n.map(function(value, index){
 
-                            console.log(value);
-                            console.log("true");
-
                             button(value, index,filter[0].acorde);
 
                         });
                     })
 
+                    
                     ap.appendChild(textPos);
                     
                     
@@ -183,8 +176,6 @@ function acordes(element, data, title){
 
 function button(value, index, tom){
 
-    console.log(value);
-    console.log("id");
 
     const id = value.position;
     oldStatus.push(id);
@@ -207,7 +198,7 @@ function button(value, index, tom){
 
     });
 
-    if (value.position != "40" && value.position != "20" && value.position != "30" && value.position != "40") {
+    if (value.position != "40" && value.position != "20" && value.position != "30" && value.position != "10") {
         document.getElementById(id).appendChild(nb);
     }else{
         document.getElementById(id).style.color = "#72b01d";

@@ -34,7 +34,7 @@ $(".control", function(){
             const ps = datas.data().fret;
             const position = dt.corda+""+ps;
     
-            if (ps > 0 && $($(p[index]).children()[index2]).hasClass("fret--on")) {
+            if (ps >= -1 && $($(p[index]).children()[index2]).hasClass("fret--on")) {
                 console.log(position);
 
                 // Para Escalas

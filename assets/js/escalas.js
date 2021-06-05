@@ -26,8 +26,6 @@ function escala(element, dataSet){
         clnsText.innerHTML = value.name;
         clnsText.addEventListener("click", function(){
 
-            console.log(value);
-
             oldState.scale.map(function(value, index){
                 $("#s-"+value).remove();
             });
@@ -47,6 +45,8 @@ function escala(element, dataSet){
             if (scale) {
                 scale[0].n.map(function(value, index){
 
+            
+
                     $("#container-bx-nota-id").text(scale[0].name);
                     $("#container-bx-nota-id").css({fontSize:"1.1em"});
 
@@ -57,13 +57,19 @@ function escala(element, dataSet){
                     oldState.scale.push(value.position);
     
                     const bScale = document.createElement("div");
-                    bScale.setAttribute("class", "nota-boll");
+
+                    if (value.name == tom[0].name) {
+                        bScale.setAttribute("class", "nota-boll nota-boll-tom");
+                    }else{
+                        bScale.setAttribute("class", "nota-boll");
+                    }
+
+                    
+
                     bScale.setAttribute("id", "s-"+value.position);
                     bScale.dataset.t = "dwwdwd";
                     bScale.innerHTML = value.name;
                     bScale.addEventListener("click", function(){
-
-                      
 
                         const el = document.getElementById("main-2-id");
 
@@ -71,7 +77,6 @@ function escala(element, dataSet){
                             
                         });
 
-                        console.log(el.scrollLeft);
                     });
     
                     document.getElementById(value.position).appendChild(bScale);
