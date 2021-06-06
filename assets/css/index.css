@@ -254,6 +254,7 @@ body{
 .n{
     color: #fff;
     padding: 7px 20px;
+    cursor: pointer;
 }
 
 /* .n:hover{
@@ -279,6 +280,7 @@ body{
 .textPos{
     padding: 2px 10px;
     font-size: 0.9em;
+    cursor: pointer;
 }
 
 .activePos{
