@@ -150,7 +150,7 @@ const bd = [
         ]},
     ]},
     {id:2, acorde:'C#',scrollEl:370 ,notas:[
-        {pos:1, scroll:"", n:[
+        {pos:1, scroll:240, n:[
             ...converte([{"position":"11","pointer":"boll","nota":"G#"},{"position":"21","pointer":"boll","nota":"C#"},{"position":"31","pointer":"boll","nota":"F"},{"position":"44","pointer":"boll","nota":"C#"}])
         ]},
         // {pos:1, scroll:"", n:[
@@ -167,7 +167,7 @@ const bd = [
         // ]},
     ]},
     {id:2, acorde:'D#',scrollEl:370 ,notas:[
-        {pos:1, scroll:"", n:[
+        {pos:1, scroll:240, n:[
             ...converte([{"position":"10","pointer":"boll","nota":"G"},{"position":"23","pointer":"boll","nota":"D#"},{"position":"33","pointer":"boll","nota":"G"},{"position":"41","pointer":"boll","nota":"A#"}])
         ]},
         // {pos:1, scroll:"", n:[
@@ -184,7 +184,7 @@ const bd = [
         // ]},
     ]},
     {id:2, acorde:'F#',scrollEl:370 ,notas:[
-        {pos:1, scroll:"", n:[
+        {pos:1, scroll:240, n:[
             ...converte([{"position":"13","pointer":"boll","nota":"A#"},{"position":"21","pointer":"boll","nota":"C#"},{"position":"32","pointer":"boll","nota":"F#"},{"position":"41","pointer":"boll","nota":"A#"}])
         ]},
         // {pos:1, scroll:"", n:[
@@ -201,7 +201,7 @@ const bd = [
         // ]},
     ]},
     {id:2, acorde:'G#',scrollEl:370 ,notas:[
-        {pos:1, scroll:"", n:[
+        {pos:1, scroll:240, n:[
             ...converte([{"position":"15","pointer":"boll","nota":"C"},{"position":"23","pointer":"boll","nota":"D#"},{"position":"34","pointer":"boll","nota":"G#"},{"position":"43","pointer":"boll","nota":"C"}])
         ]},
         // {pos:1, scroll:"", n:[
@@ -218,7 +218,7 @@ const bd = [
         // ]},
     ]},
     {id:2, acorde:'A#',scrollEl:370 ,notas:[
-        {pos:1, scroll:"", n:[
+        {pos:1, scroll:240, n:[
             ...converte([{"position":"13","pointer":"boll","nota":"A#"},{"position":"22","pointer":"boll","nota":"D"},{"position":"31","pointer":"boll","nota":"F"},{"position":"41","pointer":"boll","nota":"A#"}])
         ]},
         // {pos:1, scroll:"", n:[
@@ -235,7 +235,7 @@ const bd = [
         // ]},
     ]},
     {id:2, acorde:'C#m',scrollEl:370 ,notas:[
-        {pos:1, scroll:"", n:[
+        {pos:1, scroll:240, n:[
             ...converte([{"position":"11","pointer":"boll","nota":"G#"},{"position":"21","pointer":"boll","nota":"C#"},{"position":"30","pointer":"boll","nota":"E"},{"position":"44","pointer":"boll","nota":"C#"}])
         ]},
         // {pos:1, scroll:"", n:[
@@ -252,7 +252,7 @@ const bd = [
         // ]},
     ]},
     {id:2, acorde:'D#m',scrollEl:370 ,notas:[
-        {pos:1, scroll:"", n:[
+        {pos:1, scroll:240, n:[
             ...converte([{"position":"13","pointer":"boll","nota":"A#"},{"position":"23","pointer":"boll","nota":"D#"},{"position":"32","pointer":"boll","nota":"F#"},{"position":"41","pointer":"boll","nota":"A#"}])
         ]},
         // {pos:1, scroll:"", n:[
@@ -269,67 +269,67 @@ const bd = [
         // ]},
     ]},
     {id:2, acorde:'F#m',scrollEl:370 ,notas:[
-        {pos:1, scroll:"", n:[
+        {pos:1, scroll:240, n:[
             ...converte([{"position":"12","pointer":"boll","nota":"A"},{"position":"21","pointer":"boll","nota":"C#"},{"position":"32","pointer":"boll","nota":"F#"},{"position":"40","pointer":"boll","nota":"A"}])
         ]},
     ]},
     {id:2, acorde:'G#m',scrollEl:370 ,notas:[
-        {pos:1, scroll:"", n:[
+        {pos:1, scroll:240, n:[
             ...converte([{"position":"11","pointer":"boll","nota":"G#"},{"position":"23","pointer":"boll","nota":"D#"},{"position":"34","pointer":"boll","nota":"G#"},{"position":"42","pointer":"boll","nota":"B"}])
         ]},
     ]},
     {id:2, acorde:'A#m',scrollEl:370 ,notas:[
-        {pos:1, scroll:"", n:[
+        {pos:1, scroll:240, n:[
             ...converte([{"position":"13","pointer":"boll","nota":"A#"},{"position":"21","pointer":"boll","nota":"C#"},{"position":"31","pointer":"boll","nota":"F"},{"position":"41","pointer":"boll","nota":"A#"}])
         ]},
     ]},
     {id:2, acorde:'Db',scrollEl:370 ,notas:[
-        {pos:1, scroll:"", n:[
+        {pos:1, scroll:240, n:[
             ...converte([{"position":"11","pointer":"boll","nota":"G#"},{"position":"21","pointer":"boll","nota":"C#"},{"position":"31","pointer":"boll","nota":"F"},{"position":"44","pointer":"boll","nota":"C#"}])
         ]},
     ]},
     {id:2, acorde:'Eb',scrollEl:370 ,notas:[
-        {pos:1, scroll:"", n:[
+        {pos:1, scroll:240, n:[
             ...converte([{"position":"10","pointer":"boll","nota":"G"},{"position":"23","pointer":"boll","nota":"D#"},{"position":"33","pointer":"boll","nota":"G"},{"position":"41","pointer":"boll","nota":"A#"}])
         ]},
     ]},
     {id:2, acorde:'Gb',scrollEl:370 ,notas:[
-        {pos:1, scroll:"", n:[
+        {pos:1, scroll:240, n:[
             ...converte([{"position":"13","pointer":"boll","nota":"A#"},{"position":"21","pointer":"boll","nota":"C#"},{"position":"32","pointer":"boll","nota":"F#"},{"position":"41","pointer":"boll","nota":"A#"}])
         ]},
     ]},
     {id:2, acorde:'Ab',scrollEl:370 ,notas:[
-        {pos:1, scroll:"", n:[
+        {pos:1, scroll:240, n:[
             ...converte([{"position":"15","pointer":"boll","nota":"C"},{"position":"23","pointer":"boll","nota":"D#"},{"position":"34","pointer":"boll","nota":"G#"},{"position":"43","pointer":"boll","nota":"C"}])
         ]},
     ]},
     {id:2, acorde:'Bb',scrollEl:370 ,notas:[
-        {pos:1, scroll:"", n:[
+        {pos:1, scroll:240, n:[
             ...converte([{"position":"13","pointer":"boll","nota":"A#"},{"position":"22","pointer":"boll","nota":"D"},{"position":"31","pointer":"boll","nota":"F"},{"position":"41","pointer":"boll","nota":"A#"}])
         ]},
     ]},
     {id:2, acorde:'Dbm',scrollEl:370 ,notas:[
-        {pos:1, scroll:"", n:[
+        {pos:1, scroll:240, n:[
             ...converte([{"position":"11","pointer":"boll","nota":"G#"},{"position":"21","pointer":"boll","nota":"C#"},{"position":"30","pointer":"boll","nota":"E"},{"position":"44","pointer":"boll","nota":"C#"}])
         ]},
     ]},
     {id:2, acorde:'Ebm',scrollEl:370 ,notas:[
-        {pos:1, scroll:"", n:[
+        {pos:1, scroll:240, n:[
             ...converte([{"position":"13","pointer":"boll","nota":"A#"},{"position":"23","pointer":"boll","nota":"D#"},{"position":"32","pointer":"boll","nota":"F#"},{"position":"41","pointer":"boll","nota":"A#"}])
         ]},
     ]},
     {id:2, acorde:'Gbm',scrollEl:370 ,notas:[
-        {pos:1, scroll:"", n:[
+        {pos:1, scroll:240, n:[
             ...converte([{"position":"12","pointer":"boll","nota":"A"},{"position":"21","pointer":"boll","nota":"C#"},{"position":"32","pointer":"boll","nota":"F#"},{"position":"40","pointer":"boll","nota":"A"}])
         ]},
     ]},
     {id:2, acorde:'Abm',scrollEl:370 ,notas:[
-        {pos:1, scroll:"", n:[
+        {pos:1, scroll:240, n:[
             ...converte([{"position":"11","pointer":"boll","nota":"G#"},{"position":"23","pointer":"boll","nota":"D#"},{"position":"34","pointer":"boll","nota":"G#"},{"position":"42","pointer":"boll","nota":"B"}])
         ]},
     ]},
     {id:2, acorde:'Bbm',scrollEl:370 ,notas:[
-        {pos:1, scroll:"", n:[
+        {pos:1, scroll:240, n:[
             ...converte([{"position":"13","pointer":"boll","nota":"A#"},{"position":"21","pointer":"boll","nota":"C#"},{"position":"31","pointer":"boll","nota":"F"},{"position":"41","pointer":"boll","nota":"A#"}])
         ]},
     ]},
