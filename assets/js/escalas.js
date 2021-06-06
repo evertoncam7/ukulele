@@ -2,6 +2,8 @@
 
 function escala(element, dataSet){
 
+    $("#main-2-id").scrollLeft(340);
+
 
     $("#container-bx-nota-id").text(" ");
     oldStatus.map(function (value, index){
