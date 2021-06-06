@@ -114,6 +114,10 @@ const bd = [
             ...converte([{"position":"14","pointer":"boll","nota":"B"},{"position":"23","pointer":"boll","nota":"D#"},{"position":"32","pointer":"boll","nota":"F#"},{"position":"42","pointer":"boll","nota":"B"}])
         ]},
     ]},
+
+
+
+    
     {id:7, acorde:'Cm',scrollEl:370 ,notas:[
         {pos:1, scroll:240, n:[
             ...converte([{"position":"10","pointer":"boll","nota":"G"},{"position":"23","pointer":"boll","nota":"D#"},{"position":"33","pointer":"boll","nota":"G"},{"position":"43","pointer":"boll","nota":"C"}])

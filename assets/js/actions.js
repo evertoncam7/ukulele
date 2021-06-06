@@ -14,7 +14,18 @@ let oldStatus = [];
     
 // });
 
-$(".title-controll").on("click", function(){
+const el = document.getElementById("box-display-id");
+
+acordes(el, dataset.maior, "Maior");
+acordes(el, dataset.menor, "Menor");
+acordes(el, dataset.maiorSustenido, "Maior Sustenido");
+acordes(el, dataset.menorSustenido, "Menor Sustenido");
+acordes(el, dataset.maiorBemol, "Maior Bemol");
+acordes(el, dataset.menorBemol, "Menor Bemol");
+
+$(".a").fadeIn().css({"display":"flex"});
+
+function activeButtons(){
 
     $("#container-bx-nota-id").text("");
 
@@ -26,20 +37,17 @@ $(".title-controll").on("click", function(){
     $(this).addClass("active-button-controll");
 
     const data = $(this).data();
-    const el = document.getElementById("box-display-id");
+    
     el.innerHTML = "";
 
     if (data.category == 'acordes') {
 
         acordes(el, dataset.maior, "Maior");
         acordes(el, dataset.menor, "Menor");
-
         acordes(el, dataset.maiorSustenido, "Maior Sustenido");
         acordes(el, dataset.menorSustenido, "Menor Sustenido");
-
         acordes(el, dataset.maiorBemol, "Maior Bemol");
         acordes(el, dataset.menorBemol, "Menor Bemol");
-
 
         $(".a").fadeIn().css({"display":"flex"});
 
@@ -55,8 +63,10 @@ $(".title-controll").on("click", function(){
         el.appendChild(bxColumns);
         $(".bxColumns").fadeIn().css({"display":"flex"});
     }
-    
-});
+
+}
+
+$(".title-controll").on("click", activeButtons);
 
 function acordes(element, data, title){
 
