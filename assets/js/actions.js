@@ -3,16 +3,16 @@
 let oldStatus = [];
 
 
-$(".bar").on("click", function(){
+// $(".bar").on("click", function(){
 
-    if ($(".box-links-instruments").css("display") == "none") {
-        $(".box-links-instruments").fadeIn(1000);
-        $(".box-links-instruments").css({"display":"flex"})
-    }else{
-        $(".box-links-instruments").fadeOut(500);
-    }
+//     if ($(".box-links-instruments").css("display") == "none") {
+//         $(".box-links-instruments").fadeIn(1000);
+//         $(".box-links-instruments").css({"display":"flex"})
+//     }else{
+//         $(".box-links-instruments").fadeOut(500);
+//     }
     
-});
+// });
 
 $(".title-controll").on("click", function(){
 
