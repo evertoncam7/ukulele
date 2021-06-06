@@ -72,6 +72,14 @@ body{
     
 }
 
+.icon-three-bars{
+    font-size: 1.6em;
+}
+
+.icon-ellipsis-h{
+    font-size: 1.6em;
+}
+
 .container-bx-nota{
     width: 100%;
     height: 60px;
