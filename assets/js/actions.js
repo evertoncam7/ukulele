@@ -16,15 +16,6 @@ let oldStatus = [];
 
 const el = document.getElementById("box-display-id");
 
-acordes(el, dataset.maior, "Maior");
-acordes(el, dataset.menor, "Menor");
-acordes(el, dataset.maiorSustenido, "Maior Sustenido");
-acordes(el, dataset.menorSustenido, "Menor Sustenido");
-acordes(el, dataset.maiorBemol, "Maior Bemol");
-acordes(el, dataset.menorBemol, "Menor Bemol");
-
-$(".a").fadeIn().css({"display":"flex"});
-
 function activeButtons(){
 
     $("#container-bx-nota-id").text("");
