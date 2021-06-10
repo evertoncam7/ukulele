@@ -1,6 +1,27 @@
 
 $("#main-2-id").scrollLeft(340);
+const scrol = document.querySelector("#main-2-id");
+scrol.addEventListener("scroll", function(e){
 
+    if (e.target.scrollLeft < 210) {
+
+        const clone1 = document.querySelector(".bxNameNotas").cloneNode(true);
+        clone1.setAttribute("class", "bxNameNotas2");
+        console.log(clone1);
+
+        if (!document.querySelector(".bxNameNotas2")) {
+            document.querySelector("#bx-braco").appendChild(clone1);
+        }
+
+    }else{
+
+        if (document.querySelector(".bxNameNotas2")) {
+            document.querySelector(".bxNameNotas2").remove();
+        }
+
+    }
+
+});
 
 const oldState = {
     scale:[]
