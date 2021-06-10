@@ -281,9 +281,12 @@ body{
     padding: 10px;
     color: #fff;
     font-weight: bold;
-    font-size: 1.1em;
+    font-size: 1em;
     background: #7f0799;
     margin-bottom: 10px;
+    border-radius: 5px 5px 0px 0px;
+    border-bottom: 3px solid #fff;
+    text-transform: uppercase;
 }
 
 .textPos{
@@ -317,6 +320,7 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
+    text-shadow: 0px 0px 5px #000;
 }
 
 .bxNameNotasColumns{
@@ -364,6 +368,9 @@ body{
     font-size: 1.1em;
     margin-bottom: 5px;
     font-weight: bold;
+    border-radius: 5px 5px 0px 0px;
+    border-bottom: 3px solid #fff;
+    text-transform: uppercase;
 }
 
 .clnsText{
