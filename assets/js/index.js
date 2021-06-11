@@ -1,5 +1,29 @@
 
 $("#main-2-id").scrollLeft(340);
+
+
+const statesOld = {
+    notas:[]
+};
+
+function removeStatesNotas(){
+    statesOld.notas.map(function(item, indice){
+        $("#"+item).remove();
+    });
+}
+
+const qs = function(selector){
+
+    return document.querySelector(selector);
+
+}
+
+const qsall = function(selector){
+
+    return document.querySelectorAll(selector);
+
+}
+
 const scrol = document.querySelector("#main-2-id");
 scrol.addEventListener("scroll", function(e){
 
@@ -7,7 +31,6 @@ scrol.addEventListener("scroll", function(e){
 
         const clone1 = document.querySelector(".bxNameNotas").cloneNode(true);
         clone1.setAttribute("class", "bxNameNotas2");
-        console.log(clone1);
 
         if (!document.querySelector(".bxNameNotas2")) {
             document.querySelector("#bx-braco").appendChild(clone1);

@@ -53,6 +53,9 @@ function activeButtons(){
 
         el.appendChild(bxColumns);
         $(".bxColumns").fadeIn().css({"display":"flex"});
+
+    }else if(data.category == 'notas'){
+        notass();
     }
 
 }
@@ -60,6 +63,8 @@ function activeButtons(){
 $(".title-controll").on("click", activeButtons);
 
 function acordes(element, data, title){
+
+    removeStatesNotas();
 
     const a = document.createElement("div");
     a.setAttribute("class", "a");
@@ -88,7 +93,9 @@ function acordes(element, data, title){
         n.innerHTML = item;
         n.addEventListener("click", function(){
 
-            
+            qsall(".ap").forEach(function(el){
+                el.innerHTML = "";
+            });
 
             $(".n").removeClass("actve-button-notas");
             $(this).addClass("actve-button-notas");

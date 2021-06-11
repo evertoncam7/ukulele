@@ -2,6 +2,8 @@
 
 function escala(element, dataSet){
 
+    removeStatesNotas();
+
     $("#main-2-id").scrollLeft(340);
 
 
