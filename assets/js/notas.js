@@ -1,15 +1,17 @@
 
 const notas = {
-    0:["G", "F#/Gb", "F", "E", "D#/Eb", "D", "C#/Db", "C", "B", "A#/Bb", "A", "G#/Ab"],
-    1:["C", "B", "A#/Bb", "A", "G#/Ab", "G", "F#/Gb", "F", "E", "D#/Eb", "D", "C#/Db"],
-    2:["E", "D#/Eb", "D", "C#/Db", "C", "B", "A#/Bb", "A", "G#/Ab", "G", "F#/Gb", "F"],
-    3:["A", "G#/Ab", "G", "F#/Gb", "F", "E", "D#/Eb", "D", "C#/Db", "C", "B", "A#/Bb"]
+    0:["G", "F#", "F", "E", "D#", "D", "C#", "C", "B", "A#", "A", "G#"],
+    1:["C", "B", "A#", "A", "G#", "G", "F#", "F", "E", "D#", "D", "C#"],
+    2:["E", "D#", "D", "C#", "C", "B", "A#", "A", "G#", "G", "F#", "F"],
+    3:["A", "G#", "G", "F#", "F", "E", "D#", "D", "C#", "C", "B", "A#"]
 }
 
 
 
 
 function notass(){
+
+    $(".nameCordasClass").css("color", "#fff");
 
     $("#container-bx-nota-id").text(" ");
     oldStatus.map(function (value, index){
@@ -34,15 +36,8 @@ function notass(){
 
         });
 
-
-        
-    
-
-        
     });
 
     console.log(statesOld);
-
-    
 
 }

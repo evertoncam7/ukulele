@@ -2,6 +2,8 @@
 
 function escala(element, dataSet){
 
+    $(".nameCordasClass").css("color", "#fff");
+
     removeStatesNotas();
 
     $("#main-2-id").scrollLeft(340);

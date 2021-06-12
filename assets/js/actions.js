@@ -55,7 +55,11 @@ function activeButtons(){
         $(".bxColumns").fadeIn().css({"display":"flex"});
 
     }else if(data.category == 'notas'){
-        notass();
+        
+        if (!qs(".bl")) {
+            notass();
+        }
+        
     }
 
 }

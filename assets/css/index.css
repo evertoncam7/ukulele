@@ -182,13 +182,14 @@ body{
 }
  
 .nota-boll{
-    width: 30px;
-    height: 30px;
+    width: 25px;
+    height: 25px;
     display: flex;
     align-items: center;
     justify-content: center;
-    border-radius: 15px;
-    background: #72b01d;
+    border-radius: 12.5px;
+    /* background: #72b01d; */
+    background: rgba(114, 176, 29, 0.7);
     display: none;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
     color: #fff;
@@ -196,7 +197,7 @@ body{
 }
 
 .nota-boll-tom{
-    border: 2px solid #9609b6;
+    border: 2px solid #fff;
     /* color: #9609b6; */
 }
 
@@ -387,12 +388,17 @@ body{
 }
 
 .bl{
+    width: 25px;
+    height: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12.5px;
+    /* background: #72b01d; */
+    background: rgba(114, 176, 29, 0.7);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
     color: #fff;
-    font-size: .9em;
-    text-shadow: 0px 0px 10px #000;
-    /* background: #7f0799; */
-    background: #72b01d;
-    padding: 1px 3px;
+    font-weight: bold;
 }
 
 
