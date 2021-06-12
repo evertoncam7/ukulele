@@ -7,8 +7,6 @@ const notas = {
 }
 
 
-
-
 function notass(){
 
     $(".nameCordasClass").css("color", "#fff");

@@ -29,9 +29,10 @@ function activeButtons(){
 
     const data = $(this).data();
     
-    el.innerHTML = "";
+    
 
     if (data.category == 'acordes') {
+        el.innerHTML = "";
 
         acordes(el, dataset.maior, "Maior");
         acordes(el, dataset.menor, "Menor");
@@ -43,6 +44,7 @@ function activeButtons(){
         $(".a").fadeIn().css({"display":"flex"});
 
     }else if(data.category == 'escalas'){
+        el.innerHTML = "";
 
         const bxColumns = document.createElement("div");
         bxColumns.setAttribute("class", "bxColumns");
@@ -57,8 +59,14 @@ function activeButtons(){
     }else if(data.category == 'notas'){
         
         if (!qs(".bl")) {
+            el.innerHTML = "";
             notass();
+            const descriptionNotas = document.createElement("div");
+            descriptionNotas.setAttribute("class", "descriptionNotas");
+            descriptionNotas.innerHTML = "Este mapa de notas mostra as posições que cada nota tem ao longo do braço do Ukulelê";
+            el.appendChild(descriptionNotas);
         }
+
         
     }
 
