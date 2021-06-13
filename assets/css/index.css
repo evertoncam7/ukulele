@@ -225,6 +225,7 @@ body{
 .box-display{
     display: flex;
     flex-wrap: wrap;
+    padding: 10px;
 }
 
 .title-controll{
@@ -256,6 +257,10 @@ body{
     justify-content: center;
     flex-wrap: wrap;
     display: none;
+    background: #191919;
+    margin-bottom: 5px;
+    border-left: 7px solid #9609b6;
+    border-radius: 5px;
 }
 
 .ap{
@@ -284,10 +289,10 @@ body{
     color: #fff;
     font-weight: bold;
     font-size: 1em;
-    background: #7f0799;
+    /* background: #7f0799; */
     margin-bottom: 10px;
     border-radius: 5px 5px 0px 0px;
-    border-bottom: 3px solid #fff;
+    /* border-bottom: 3px solid #fff; */
     text-transform: uppercase;
 }
 
@@ -358,23 +363,31 @@ body{
     display: flex;
     flex-wrap: wrap;
     display: none;
+    
 }
 
 .clns{
-    padding: 10px 15px;
+    padding: 10px 0px;
+    background: #191919;
+    margin-bottom: 5px;
+    border-left: 7px solid #9609b6;
+    border-radius: 5px;
 }
 
 
 .clnsTitle{
     padding: 10px;
-    background: #7f0799;
+    /* background: #7f0799; */
     color: #fff;
     font-size: 1.1em;
     margin-bottom: 5px;
     font-weight: bold;
     border-radius: 5px 5px 0px 0px;
-    border-bottom: 3px solid #fff;
+    /* border-bottom: 3px solid #fff; */
     text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .clnsText{
@@ -387,9 +400,9 @@ body{
 .clnsText::before{
     content:"";
     display: inline-block;
-    width:15px;
-    height: 15px;
-    border-radius: 7.5px;
+    width:10px;
+    height: 10px;
+    border-radius: 5px;
     background:#c604f7;
     margin-right: 10px;
 }
@@ -424,7 +437,6 @@ body{
 
 .bxE{
     width: 100%;
-    padding: 10px;
 }
 
 .bxBtnExerc{
@@ -497,9 +509,9 @@ body{
 .descExercLinkText::before{
     content:"";
     display: inline-block;
-    width:15px;
-    height: 15px;
-    border-radius: 7.5px;
+    width:10px;
+    height: 10px;
+    border-radius: 5px;
     background:#c604f7;
     margin-right: 10px;
 }
@@ -562,7 +574,10 @@ body{
     .clns{
         width: 100%;
         border: none;
-        padding: 10px;
+        background: #191919;
+        margin-bottom: 5px;
+        border-left: 7px solid #9609b6;
+        border-radius: 5px;
     }
 
 }
