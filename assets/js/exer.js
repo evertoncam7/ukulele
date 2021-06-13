@@ -25,9 +25,14 @@ function exercicio(el){
             if (inter) {
                 clearInterval(inter);
             }
-            
 
-            inter = setInterval(function(){
+            $(".bx-count").css({"display":"flex"});
+            
+            // pppppppppp
+            counter(startTime, value.tempo);
+
+
+            function startTime(){
 
                 if (len) {
 
@@ -69,7 +74,13 @@ function exercicio(el){
 
                 len--;
 
-            }, value.tempo);
+            }
+
+
+
+
+
+
 
         });
 
@@ -91,3 +102,30 @@ function exercicio(el){
     el.appendChild(bxE);
 
 }
+
+
+function counter(fun, t){
+    let counte = 1; 
+    let cou = 3;
+    
+    $("#id-count").html(cou);
+    const c = setInterval(function(){
+        if (counte <= 2) {
+            console.log("dwd");
+            cou--;
+            $("#id-count").html(cou);
+            
+            counte++;
+        }else{
+
+            console.log("ligar");
+            $(".bx-count").fadeOut();
+            fun();
+            inter = setInterval( fun, t);
+
+            clearInterval(c);
+        }
+    }, 1000);
+}
+
+// console.log(counter());

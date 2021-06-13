@@ -580,7 +580,8 @@ const notas = {
 }
 
 const exerc = [
-    {id:1, nome:"1-2-3-4", tempo:1000, pos:[11,12,13,14,21,22,23,24,31,32,33,34,41,42,43,44], esquerda:[1, 2, 3, 4, 1, 2, 3, 4, 1, 2, 3, 4, 1, 2, 3, 4], direita:["b", "c", "b", "c", "b", "c", "b", "c", "b", "c", "b", "c", "b", "c", "b", "c"], 
-        desc:"Este exercício consiste em apertar a corda contra a casa nas posições que aparecer no braço do instrumento acima."},
-    {id:2, nome:"4-3-2-1", tempo:1000, pos:[14,13,12,11], esquerda:[4, 3, 2, 1], direita:["c", "b", "c", "b"], desc:""},
+    {id:1, nome:"1-2-3-4", tempo:2000, pos:[11,12,13,14,21,22,23,24,31,32,33,34,41,42,43,44], esquerda:[1, 2, 3, 4, 1, 2, 3, 4, 1, 2, 3, 4, 1, 2, 3, 4], direita:["b", "c", "b", "c", "b", "c", "b", "c", "b", "c", "b", "c", "b", "c", "b", "c"], 
+        desc:"30 bpm"},
+    {id:2, nome:"4-3-2-1", tempo:1000, pos:[14,13,12,11], esquerda:[4, 3, 2, 1], direita:["c", "b", "c", "b"], 
+        desc:"60 bpm"},
 ];
