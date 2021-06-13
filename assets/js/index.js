@@ -3,13 +3,39 @@ $("#main-2-id").scrollLeft(340);
 
 
 const statesOld = {
-    notas:[]
+    notas:[],
+    exerc:[]
 };
 
+let inter = "";
+
 function removeStatesNotas(){
+
+    
+
+    
     statesOld.notas.map(function(item, indice){
         $("#"+item).remove();
     });
+
+    statesOld.notas = [];
+    
+
+}
+
+
+function removeExercicio(){
+    statesOld.exerc.map(function(value, index){
+        if (value) {
+            $("#"+value).remove();
+        }
+    });
+    statesOld.exerc = [];
+
+    if (inter) {
+        clearInterval(inter);
+    }
+    
 }
 
 const qs = function(selector){

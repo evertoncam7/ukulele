@@ -1,13 +1,8 @@
 
-const notas = {
-    0:["G", "F#", "F", "E", "D#", "D", "C#", "C", "B", "A#", "A", "G#"],
-    1:["C", "B", "A#", "A", "G#", "G", "F#", "F", "E", "D#", "D", "C#"],
-    2:["E", "D#", "D", "C#", "C", "B", "A#", "A", "G#", "G", "F#", "F"],
-    3:["A", "G#", "G", "F#", "F", "E", "D#", "D", "C#", "C", "B", "A#"]
-}
-
 
 function notass(){
+
+    removeExercicio();
 
     $(".nameCordasClass").css("color", "#fff");
 
@@ -27,6 +22,9 @@ function notass(){
             bl.setAttribute("id", "notas_"+indice+"_"+indice2);
 
             bl.innerHTML = notas[indice][indice2];
+            bl.addEventListener("click", function(){
+                alert($(this).parent().attr("id"));
+            });
 
             item2.appendChild(bl);
             statesOld.notas.push("notas_"+indice+"_"+indice2);

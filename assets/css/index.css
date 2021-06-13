@@ -233,6 +233,7 @@ body{
     font-size: 0.9em;
     margin: auto;
     font-weight: bold;
+    border-radius: 3px;
 }
 
 .title-controll:hover{
@@ -346,6 +347,8 @@ body{
     background: #fff;
     color: #000;
     font-weight: bold;
+    border-radius: 3px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
 }
 
 /* ESCALAS */
@@ -401,10 +404,53 @@ body{
     font-weight: bold;
 }
 
-.descriptionNotas{
+.descriptionNotas, .descriptionInicio{
     padding: 10px;
     color: #fff;
 }
+
+
+/* EXERCICIOS */
+
+.bxE{
+    width: 100%;
+    padding: 10px;
+}
+
+.bxBtnExerc{
+    width: 100%;
+    padding: 10px;
+    color: #fff;
+    border: 1px solid #fff;
+    border-radius: 3px;
+    margin-bottom: 5px;
+    border-left: 7px solid #7f0799;
+}
+
+.btnExerc, .descExerc{
+    width: 100%;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+
+}
+
+.bollE{
+    width: 25px;
+    height: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12.5px;
+    /* background: #72b01d; */
+    background: rgba(114, 176, 29, 0.7);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    color: #fff;
+    font-weight: bold;
+}
+
+
+
 
 
 

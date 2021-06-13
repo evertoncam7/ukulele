@@ -29,10 +29,24 @@ function activeButtons(){
 
     const data = $(this).data();
     
-    
-
-    if (data.category == 'acordes') {
+    if (data.category == "inicio") {
         el.innerHTML = "";
+        removeStatesNotas();
+        removeExercicio();
+
+        const descriptionInicio = document.createElement("div");
+        descriptionInicio.setAttribute("class", "descriptionInicio");
+        const p1 = `<p>Você gostaria de aprender tocar um instrumento para se divertir entre amigos ou até mesmo seguir uma carreira profissional na música, mas não sabe se isso é para você ou não quer gastar uma grana no início para descobrir de tem o dom?</p>`;
+        const p2 = `<p>Aqui em nossa plataforma você encontrará tudo que você precisa para aprender o básico para tocar um dos instruentos mais baratos e faceis de aprender que é o Ukulelê.</p>`;
+
+        descriptionInicio.innerHTML = p1+ " " +p2;
+        el.appendChild(descriptionInicio);
+
+
+
+    }else if(data.category == 'acordes') {
+        el.innerHTML = "";
+        removeExercicio();
 
         acordes(el, dataset.maior, "Maior");
         acordes(el, dataset.menor, "Menor");
@@ -66,9 +80,15 @@ function activeButtons(){
             descriptionNotas.innerHTML = "Este mapa de notas mostra as posições que cada nota tem ao longo do braço do Ukulelê";
             el.appendChild(descriptionNotas);
         }
+    }else if(data.category == "exercicios"){
 
-        
+        el.innerHTML = "";
+        removeStatesNotas();
+
+        exercicio(el);
+
     }
+
 
 }
 
