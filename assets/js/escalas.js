@@ -10,9 +10,7 @@ function escala(element, dataSet){
     $("#main-2-id").scrollLeft(340);
 
     $("#container-bx-nota-id").text(" ");
-    oldStatus.map(function (value, index){
-        $("#n-"+value).remove();
-    });
+    removeEscala();
     
     const clns = document.createElement("div");
     clns.setAttribute("class", "clns");

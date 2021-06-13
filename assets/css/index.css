@@ -384,6 +384,16 @@ body{
     padding: 10px;
 }
 
+.clnsText::before{
+    content:"";
+    display: inline-block;
+    width:15px;
+    height: 15px;
+    border-radius: 7.5px;
+    background:#c604f7;
+    margin-right: 10px;
+}
+
 .clnsText:hover{
     background: #fff;
     color: #000;
@@ -421,7 +431,8 @@ body{
     width: 100%;
     padding: 10px;
     color: #fff;
-    border: 1px solid #fff;
+    background: #191919;
+    /* border: 1px solid #fff; */
     border-radius: 3px;
     margin-bottom: 5px;
     border-left: 7px solid #7f0799;
@@ -430,8 +441,7 @@ body{
 .btnExerc, .descExerc{
     width: 100%;
     padding: 10px;
-    display: flex;
-    align-items: center;
+    
 
 }
 
@@ -469,6 +479,56 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.descExercLink{
+    width: 100%;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.descExercLinkText{
+    display: flex;
+    align-items: center;
+}
+
+.descExercLinkText::before{
+    content:"";
+    display: inline-block;
+    width:15px;
+    height: 15px;
+    border-radius: 7.5px;
+    background:#c604f7;
+    margin-right: 10px;
+}
+
+.descExercLinkControll{
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.descExercLinkControllCont{
+    font-size: 1.4em;
+    padding: 0px 5px;
+}
+
+.descExercLinkControllBpm{
+    font-size: 0.9em;
+    margin-left: 10px;
+}
+
+
+.descExercLinkActive{
+    background: #9609b6;
+    border-bottom: 3px solid #fff;
+    border-radius:3px;
+}
+
+.icon-sort-asc, .icon-sort-desc{
+    font-size: 1.3em;
 }
 
 

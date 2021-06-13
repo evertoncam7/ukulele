@@ -14,88 +14,72 @@ function exercicio(el){
 
         const bxBtnExerc = document.createElement("div");
         bxBtnExerc.setAttribute("class", "bxBtnExerc");
-        bxBtnExerc.addEventListener("click", function(){
-
-            removeExercicio();
-
-            let indexExer = 0;
-
-            len = value.pos.length;
-            
-            if (inter) {
-                clearInterval(inter);
-            }
-
-            $(".bx-count").css({"display":"flex"});
-            
-            // pppppppppp
-            counter(startTime, value.tempo);
-
-
-            function startTime(){
-
-                if (len) {
-
-                    const casaE = document.getElementById(value.pos[indexExer]);
-
-                    const bollE = document.createElement("div");
-                    bollE.setAttribute("class", "bollE");
-                    bollE.setAttribute("id", "id-bollE"+value.pos[indexExer]);
-                    bollE.innerHTML = value.esquerda[indexExer];
-
-                    switch(value.direita[indexExer]){
-
-                        case "c":
-                            $("#container-bx-nota-id").html("<span class='icon-sort-asc'></span>");
-                            break;
-                        case "b":
-                            $("#container-bx-nota-id").html("<span class='icon-sort-desc'></span>");
-                            break;
-                        default:
-                            return "";
-                               
-                    }
-
-                    if (indexExer > 0) {
-                        $("#id-bollE"+value.pos[indexExer - 1]).fadeOut(500);
-                    }
-                    
-                    
-                    statesOld.exerc.push("id-bollE"+value.pos[indexExer]);
-                    casaE.appendChild(bollE);
-
-                    indexExer++;
-
-                    
-                }else{
-                    indexExer = 0;
-                    clearInterval(inter);
-                }
-
-                len--;
-
-            }
-
-
-
-
-
-
-
-        });
 
             const btnExerc = document.createElement("div");
             btnExerc.setAttribute("class", "btnExerc");
-            btnExerc.innerHTML = value.nome;
+            btnExerc.innerHTML = value.name;
 
             const descExerc = document.createElement("div");
             descExerc.setAttribute("class", "descExerc");
-            descExerc.innerHTML = value.desc;
+
+                value.ex.map(function(va, ind){
+
+                    const descExercLink = document.createElement("div");
+                    descExercLink.setAttribute("class", "descExercLink");
+
+                    // CONTROLE DE BPM
+                        const descExercLinkText = document.createElement("div");
+                        descExercLinkText.setAttribute("class", "descExercLinkText");
+                        descExercLinkText.innerHTML = va.nome;
+
+                        const descExercLinkControll = document.createElement("div");
+                        descExercLinkControll.setAttribute("class", "descExercLinkControll");
+                        descExercLinkControll.innerHTML = `<span class="descExercLinkControllCont icon-triangle-up"></span><span class="descExercLinkControllCont icon-triangle-down"></span><span class="descExercLinkControllBpm">60</span>bpm`;
+
+                        descExercLink.appendChild(descExercLinkText);
+                        descExercLink.appendChild(descExercLinkControll);
+
+
+                    // EVENTO DE CLIQUE DO EXERCÍCIO
+                    descExercLink.addEventListener("click", function(){
+
+                        $("#main-2-id").scrollLeft(340);
+
+                        const lista = document.querySelectorAll(".descExercLink");
+
+                        for(let l of lista){
+                            l.classList.remove("descExercLinkActive");
+                        }
+                        this.classList.add("descExercLinkActive");
+
+                        console.log(value.name);
+
+                        removeExercicio();
+                        removeStatesNotas();
+                        removeEscala();
+
+                        $("#container-bx-nota-id").text("");
+
+                        if(value.name == "NOTAS"){
+                            exNotas(va);
+
+                        }else if(value.name == "ACORDES"){
+                            exAcorde(va);
+                        }
+                        
+
+                    });
+                    descExerc.appendChild(descExercLink);
+
+                });
+            
 
             bxBtnExerc.appendChild(btnExerc);
             bxBtnExerc.appendChild(descExerc);
 
             bxE.appendChild(bxBtnExerc);
+
+           
         
     });
 
@@ -105,27 +89,95 @@ function exercicio(el){
 
 
 function counter(fun, t){
+
+    
+
     let counte = 1; 
     let cou = 3;
     
     $("#id-count").html(cou);
+
     const c = setInterval(function(){
+
         if (counte <= 2) {
-            console.log("dwd");
+
             cou--;
             $("#id-count").html(cou);
             
             counte++;
         }else{
 
-            console.log("ligar");
             $(".bx-count").fadeOut();
             fun();
             inter = setInterval( fun, t);
 
             clearInterval(c);
         }
-    }, 1000);
+
+    }, t);
+
 }
 
-// console.log(counter());
+function exNotas(data){
+
+    
+    const countItems = data.pos.length;
+    let indexItems = 0;
+
+
+    time = setInterval(function(){
+
+        if (indexItems < countItems) {
+
+            let casa = document.getElementById(data.pos[indexItems]);
+
+
+            const bollEl = document.createElement("div");
+            bollEl.setAttribute("class", "bollE");
+            bollEl.setAttribute("id", "boll-ex"+data.pos[indexItems]);
+            bollEl.innerHTML = data.esquerda[indexItems];
+
+            statesOld.exerc.push("boll-ex"+data.pos[indexItems]);
+
+            switch(data.direita[indexItems]){
+                case "c":
+                    $("#container-bx-nota-id").html("<span class='icon-sort-asc'></span>");
+                    break;
+                case "b":
+                    $("#container-bx-nota-id").html("<span class='icon-sort-desc'></span>");
+                    break;
+                default:
+                    return false;      
+            }
+
+            if (document.querySelector("#boll-ex"+data.pos[indexItems - 1])) {
+                $("#boll-ex"+data.pos[indexItems - 1]).fadeOut()
+            }
+
+            casa.appendChild(bollEl);
+
+            indexItems++;
+
+        }else{
+            
+            indexItems = 0;
+            clearInterval(time);
+            console.log("fechou");
+            console.log(statesOld);
+            
+        }
+
+    }, data.tempo);
+
+
+
+
+
+
+//    console.log(data);    
+}
+
+function exAcorde(data){
+
+    console.log(data);
+}

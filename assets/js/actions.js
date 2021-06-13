@@ -46,7 +46,7 @@ function activeButtons(){
 
     }else if(data.category == 'acordes') {
         el.innerHTML = "";
-        removeExercicio();
+        
 
         acordes(el, dataset.maior, "Maior");
         acordes(el, dataset.menor, "Menor");

@@ -7,12 +7,9 @@ const statesOld = {
     exerc:[]
 };
 
-let inter = "";
+let time = "";
 
 function removeStatesNotas(){
-
-    
-
     
     statesOld.notas.map(function(item, indice){
         $("#"+item).remove();
@@ -32,10 +29,18 @@ function removeExercicio(){
     });
     statesOld.exerc = [];
 
-    if (inter) {
-        clearInterval(inter);
+    if (time) {
+        clearInterval(time);
     }
+
+}
+
+function removeEscala(){
     
+    oldStatus.map(function (value, index){
+        $("#n-"+value).remove();
+    });
+
 }
 
 const qs = function(selector){
