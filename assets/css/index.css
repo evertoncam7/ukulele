@@ -402,7 +402,7 @@ body{
     width:10px;
     height: 10px;
     border-radius: 5px;
-    background:#c5c5c5;
+    background:rgba(197, 197, 197, 0.3);
     margin-right: 10px;
 }
 
@@ -517,7 +517,7 @@ body{
     width:10px;
     height: 10px;
     border-radius: 5px;
-    background:#c5c5c5;
+    background:rgba(197, 197, 197, 0.3);
     margin-right: 10px;
 }
 
