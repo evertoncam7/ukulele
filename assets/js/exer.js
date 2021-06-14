@@ -31,6 +31,37 @@ function exercicio(el){
                         const descExercLinkText = document.createElement("div");
                         descExercLinkText.setAttribute("class", "descExercLinkText");
                         descExercLinkText.innerHTML = va.nome;
+                        // EVENTO DE CLIQUE DO EXERCÍCIO
+                        descExercLinkText.addEventListener("click", function(){
+
+                            $("#main-2-id").scrollLeft(340);
+
+                            const lista = document.querySelectorAll(".descExercLink");
+
+                            for(let l of lista){
+                                l.classList.remove("descExercLinkActive");
+                                l.querySelector(".descExercLinkText").classList.remove("descExercLinkTextActive");
+                            }
+                            // this.classList.add("descExercLinkActive");
+                            this.classList.add("descExercLinkTextActive");
+
+                            console.log(value.name);
+
+                            removeExercicio();
+                            removeStatesNotas();
+                            removeEscala();
+
+                            $("#container-bx-nota-id").text("");
+
+                            if(value.name == "NOTAS"){
+                                exNotas(va);
+
+                            }else if(value.name == "ACORDES"){
+                                exAcorde(va);
+                            }
+                            
+
+                        });
 
                         const descExercLinkControll = document.createElement("div");
                         descExercLinkControll.setAttribute("class", "descExercLinkControll");
@@ -40,35 +71,7 @@ function exercicio(el){
                         descExercLink.appendChild(descExercLinkControll);
 
 
-                    // EVENTO DE CLIQUE DO EXERCÍCIO
-                    descExercLink.addEventListener("click", function(){
-
-                        $("#main-2-id").scrollLeft(340);
-
-                        const lista = document.querySelectorAll(".descExercLink");
-
-                        for(let l of lista){
-                            l.classList.remove("descExercLinkActive");
-                        }
-                        this.classList.add("descExercLinkActive");
-
-                        console.log(value.name);
-
-                        removeExercicio();
-                        removeStatesNotas();
-                        removeEscala();
-
-                        $("#container-bx-nota-id").text("");
-
-                        if(value.name == "NOTAS"){
-                            exNotas(va);
-
-                        }else if(value.name == "ACORDES"){
-                            exAcorde(va);
-                        }
-                        
-
-                    });
+                    
                     descExerc.appendChild(descExercLink);
 
                 });

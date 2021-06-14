@@ -30,6 +30,17 @@ function escala(element, dataSet){
         clnsText.innerHTML = value.name;
         clnsText.addEventListener("click", function(){
 
+
+            if (document.querySelector(".clnsTextActive")) {
+                const item = document.querySelectorAll(".clnsText");
+                for(let itemLink of item){
+                    itemLink.classList.remove("clnsTextActive");
+                }
+            }
+
+            this.classList.add("clnsTextActive");
+            
+
             oldState.scale.map(function(value, index){
                 $("#s-"+value).remove();
             });

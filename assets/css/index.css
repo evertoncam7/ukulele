@@ -288,7 +288,7 @@ body{
     padding: 10px;
     color: #fff;
     font-weight: bold;
-    font-size: 1em;
+    font-size: 0.9em;
     /* background: #7f0799; */
     margin-bottom: 10px;
     border-radius: 5px 5px 0px 0px;
@@ -392,12 +392,21 @@ body{
 
 .clnsText{
     color: #fff;
-    padding: 10px 0px;
     font-size: 0.9em;
-    padding: 10px;
+    padding: 10px 15px;
 }
 
 .clnsText::before{
+    content:"";
+    display: inline-block;
+    width:10px;
+    height: 10px;
+    border-radius: 5px;
+    background:#c5c5c5;
+    margin-right: 10px;
+}
+
+.clnsTextActive::before{
     content:"";
     display: inline-block;
     width:10px;
@@ -407,11 +416,7 @@ body{
     margin-right: 10px;
 }
 
-.clnsText:hover{
-    background: #fff;
-    color: #000;
-    cursor: pointer;
-}
+
 
 .bl{
     width: 25px;
@@ -453,7 +458,7 @@ body{
 .btnExerc, .descExerc{
     width: 100%;
     padding: 10px;
-    
+    font-size: 0.9em;
 
 }
 
@@ -512,6 +517,16 @@ body{
     width:10px;
     height: 10px;
     border-radius: 5px;
+    background:#c5c5c5;
+    margin-right: 10px;
+}
+
+.descExercLinkTextActive::before{
+    content:"";
+    display: inline-block;
+    width:10px;
+    height: 10px;
+    border-radius: 5px;
     background:#c604f7;
     margin-right: 10px;
 }
@@ -542,6 +557,7 @@ body{
 .icon-sort-asc, .icon-sort-desc{
     font-size: 1.3em;
 }
+
 
 
 
