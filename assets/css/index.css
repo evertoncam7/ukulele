@@ -237,11 +237,11 @@ body{
     border-radius: 3px;
 }
 
-.title-controll:hover{
+/* .title-controll:hover{
     background: #fff;
     color: #000;
     font-weight: bold;
-}
+} */
 
 .casaCount{
     position: absolute;
@@ -344,16 +344,20 @@ body{
 } 
 
 .actve-button-notas{
-    background: #555;
+    background: #111;
     color: #fff;
+    border-bottom: #9609b6 3px solid;
 }
 
 .active-button-controll{
-    background: #fff;
-    color: #000;
+    /* background: #fff; */
+    /* color: #000; */
+    background: #111;
+    color: #fff;
+    border-bottom: #9609b6 solid 3px;
     font-weight: bold;
     border-radius: 3px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    /* box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); */
 }
 
 /* ESCALAS */
@@ -604,3 +608,6 @@ body{
 }; */
 
 /* 2038931767 */
+
+/* É UM HOMEM QUE LUTA PELO INTERESSE DO BRASIL EM ESPECIAL AO SEU ESTADO. */
+
