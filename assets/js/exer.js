@@ -24,7 +24,8 @@ function exercicio(el){
 
                 value.ex.map(function(va, ind){
 
-                    console.log(va);
+                    // console.log("va ------------------")
+                    // console.log(va);
 
                     const descExercLink = document.createElement("div");
                     descExercLink.setAttribute("class", "descExercLink");
@@ -47,7 +48,8 @@ function exercicio(el){
                             // this.classList.add("descExercLinkActive");
                             this.classList.add("descExercLinkTextActive");
 
-                            console.log(value.name);
+                            // console.log("name -------------------------------")
+                            // console.log(value.name);
 
                             removeExercicio();
                             removeStatesNotas();
@@ -89,6 +91,7 @@ function exercicio(el){
     });
 
     el.appendChild(bxE);
+    return bxE;
 
 }
 
@@ -183,20 +186,10 @@ function exNotas(data){
 }
 
 function exAcorde(data){
-
+    console.log("ac ------------------")
     console.log(data);
 }
 
-
-function tabs(data){
-    console.log(data);
-}
-
-tabs([
-    {
-
-    }
-])
 
 
 

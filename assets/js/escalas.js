@@ -60,8 +60,6 @@ function escala(element, dataSet){
             if (scale) {
                 scale[0].n.map(function(value, index){
 
-            
-
                     $("#container-bx-nota-id").text(scale[0].name);
                     $("#container-bx-nota-id").css({fontSize:"1.1em"});
 

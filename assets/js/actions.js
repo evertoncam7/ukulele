@@ -30,6 +30,7 @@ function activeButtons(){
     const data = $(this).data();
     
     if (data.category == "inicio") {
+
         el.innerHTML = "";
         removeStatesNotas();
         removeExercicio();
@@ -45,28 +46,16 @@ function activeButtons(){
 
         const screens01 = [
             {
-                title:`<span class="icon-note-beamed"></span>`,
+                title:`Exercícios`,
                 component:descriptionInicio
             },
             {
-                title:`<span class="icon-file-text-o"></span>`,
+                title:`Dicas`,
                 component:dica01
             }
         ]
 
-        const options01 = {
-            tabPosition:"",
-            tabStyles:{
-                background:"#222",
-                color:"#fff",
-                activeButton:"#999"
-            },
-            effect:"slide/fade",
-            effectButton:"padrão/"
-        }
-        
-
-        el.appendChild(componentTab_002(screens01, options01));
+        el.appendChild(componentTab_002(screens01));
 
     }else if(data.category == 'acordes') {
         el.innerHTML = "";
@@ -77,58 +66,69 @@ function activeButtons(){
         // console.log(acordd2);
 
         const s = acordes(acordd2, dataset.maior, "Maior");
-        console.log(s);
+        // console.log(s);
         acordes(acordd2, dataset.menor, "Menor");
         acordes(acordd2, dataset.maiorSustenido, "Maior Sustenido");
         acordes(acordd2, dataset.menorSustenido, "Menor Sustenido");
         acordes(acordd2, dataset.maiorBemol, "Maior Bemol");
         acordes(acordd2, dataset.menorBemol, "Menor Bemol");
     
-        const dica02 = componentDiv("dica");
-       
-        
+        const dica02 = document.createElement("div");
+        dica02.innerHTML = "Os acordes são conjuntos de notas tocadas simultaneamente";
 
         const screens02 = [
             {
-                title:`<span class="icon-note-beamed"></span>`,
+                title:`Exercícios`,
                 component:acordd2
             },
             {
-                title:`<span class="icon-file-text-o"></span>`,
+                title:`Dicas`,
                 component:dica02
             }
         ]
 
-        const options02 = {
-            tabPosition:"",
-            tabStyles:{
-                background:"#222",
-                color:"#fff",
-                activeButton:"#999"
-            },
-            effect:"slide/fade",
-            effectButton:"padrão/"
-        }
-        
-
-        el.appendChild(componentTab_002(screens02, options02));
-        // el.appendChild();
-
+        el.appendChild(componentTab_002(screens02));
 
         $(".a").fadeIn().css({"display":"flex"});
 
     }else if(data.category == 'escalas'){
+
+
         el.innerHTML = "";
 
         const bxColumns = document.createElement("div");
+
+        const bxScaleDescriptions = document.createElement("div");
+        bxScaleDescriptions.innerHTML = "Escalas";
+
+        const pp = document.createElement("div");
+        pp.innerHTML = "Questionário";
+
         bxColumns.setAttribute("class", "bxColumns");
 
         escalasData.map(function(value, index){
             escala(bxColumns, value);
         });
 
-        el.appendChild(bxColumns);
+        const screensScale = [
+            {
+                title:"Exercícios",
+                component:bxColumns
+            },
+            {
+                title:"Dicas",
+                component:bxScaleDescriptions
+            },
+            {
+                title:`<span class="icon-clipboard-notes"></span>`,
+                component:pp
+            }
+        ];
+
+        el.appendChild(componentTab_002(screensScale));
+    
         $(".bxColumns").fadeIn().css({"display":"flex"});
+
 
     }else if(data.category == 'notas'){
         
@@ -145,7 +145,35 @@ function activeButtons(){
         el.innerHTML = "";
         removeStatesNotas();
 
-        exercicio(el);
+        const bxExer = document.createElement("div");
+        // bxExer.setAttribute("class", "bxExer");
+
+        const bxExerDes = document.createElement("div");
+        bxExerDes.innerHTML = "Tenha um hábito de treino dia a dia.";
+      
+        let ex = "";
+        console.log("------------")
+        if (exercicio(bxExer)) {
+            ex = exercicio(bxExer);
+        }
+
+        const screensExer = [
+            {
+                title:"Exercícios",
+                component:ex
+            },
+            {
+                title:"Dicas",
+                component:bxExerDes
+            },
+        ];
+
+
+
+        
+        // // // optionsExer
+        el.appendChild(componentTab_002(screensExer));
+        
 
     }
 

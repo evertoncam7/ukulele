@@ -123,6 +123,8 @@ function componentTab_002(screens, options){
                 }else{
                     button.classList.add("activeTeste");
                 }
+
+                // console.log(v)
                 v.component.setAttribute("class", "bxc activeScreen");
             }
             
