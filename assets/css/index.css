@@ -225,7 +225,11 @@ body{
 .box-display{
     display: flex;
     flex-wrap: wrap;
-    padding: 10px;
+    /* padding: 10px; */
+}
+
+.arc{
+    display: none;
 }
 
 .title-controll{
@@ -562,6 +566,75 @@ body{
     font-size: 1.3em;
 }
 
+
+/* TESTE COMPONENT */
+
+.container-c{
+    width: 100%;
+}
+.tc{
+    width: 100%;
+    /* background: #9609b6; */
+}
+
+.h{
+    position: relative;
+    width: 100%;
+    display: flex;
+    color: #fff;
+    /* box-shadow:  0px 2px 5px rgba(0, 0, 0, 0.3); */
+    background: cornflowerblue;
+    /* z-index: 100; */
+}
+
+.t{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 7px 10px;
+    text-transform: uppercase;
+}
+
+.activeTeste{
+    background: #9609b6;
+}
+
+.bxc{
+    width: 100%;
+    padding: 5px;
+    color: #fff;
+}
+
+.sel{
+    display: none;
+}
+
+.bxs{
+    width: 100%;
+    display: none;
+}
+
+.acor{
+    width: 100%;
+}
+
+.screen2{
+    width: 100%;
+    height: 200px;
+    background: crimson;
+    
+}
+
+.screen3{
+    width: 100%;
+    height: 200px;
+    background: #72b01d;
+}
+
+.bxc .activeScreen{
+    display: block;
+}
 
 
 

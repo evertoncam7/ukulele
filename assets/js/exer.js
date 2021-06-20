@@ -24,6 +24,8 @@ function exercicio(el){
 
                 value.ex.map(function(va, ind){
 
+                    console.log(va);
+
                     const descExercLink = document.createElement("div");
                     descExercLink.setAttribute("class", "descExercLink");
 
@@ -184,3 +186,26 @@ function exAcorde(data){
 
     console.log(data);
 }
+
+
+function tabs(data){
+    console.log(data);
+}
+
+tabs([
+    {
+
+    }
+])
+
+
+
+
+
+
+
+
+
+
+
+

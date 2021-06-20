@@ -37,23 +37,83 @@ function activeButtons(){
         const descriptionInicio = document.createElement("div");
         descriptionInicio.setAttribute("class", "descriptionInicio");
         const p1 = `<p>Você gostaria de aprender tocar um instrumento para se divertir entre amigos ou até mesmo seguir uma carreira profissional na música, mas não sabe se isso é para você ou não quer gastar uma grana no início para descobrir se gosta?</p>`;
-        const p2 = `<p>Aqui em nossa plataforma você encontrará tudo que você precisa para aprender o básico para tocar um dos instruentos mais baratos e faceis de aprender que é o <strong>Ukulelê</strong>.</p>`;
+        const p2 = `<p>Aqui em nossa plataforma você encontrará tudo que você precisa para aprender o básico para tocar um dos instruentos mais baratos e faceis de aprender que é o <strong>Ukulele</strong>.</p>`;
 
         descriptionInicio.innerHTML = p1+ " " +p2;
-        el.appendChild(descriptionInicio);
+        
+        const dica01 = componentDiv("dica");
 
+        const screens01 = [
+            {
+                title:`<span class="icon-note-beamed"></span>`,
+                component:descriptionInicio
+            },
+            {
+                title:`<span class="icon-file-text-o"></span>`,
+                component:dica01
+            }
+        ]
 
+        const options01 = {
+            tabPosition:"",
+            tabStyles:{
+                background:"#222",
+                color:"#fff",
+                activeButton:"#999"
+            },
+            effect:"slide/fade",
+            effectButton:"padrão/"
+        }
+        
+
+        el.appendChild(componentTab_002(screens01, options01));
 
     }else if(data.category == 'acordes') {
         el.innerHTML = "";
+
+        const acordd2 = document.createElement("div");
+        acordd2.setAttribute("class", "arc2")
+
+        // console.log(acordd2);
+
+        const s = acordes(acordd2, dataset.maior, "Maior");
+        console.log(s);
+        acordes(acordd2, dataset.menor, "Menor");
+        acordes(acordd2, dataset.maiorSustenido, "Maior Sustenido");
+        acordes(acordd2, dataset.menorSustenido, "Menor Sustenido");
+        acordes(acordd2, dataset.maiorBemol, "Maior Bemol");
+        acordes(acordd2, dataset.menorBemol, "Menor Bemol");
+    
+        const dica02 = componentDiv("dica");
+       
         
 
-        acordes(el, dataset.maior, "Maior");
-        acordes(el, dataset.menor, "Menor");
-        acordes(el, dataset.maiorSustenido, "Maior Sustenido");
-        acordes(el, dataset.menorSustenido, "Menor Sustenido");
-        acordes(el, dataset.maiorBemol, "Maior Bemol");
-        acordes(el, dataset.menorBemol, "Menor Bemol");
+        const screens02 = [
+            {
+                title:`<span class="icon-note-beamed"></span>`,
+                component:acordd2
+            },
+            {
+                title:`<span class="icon-file-text-o"></span>`,
+                component:dica02
+            }
+        ]
+
+        const options02 = {
+            tabPosition:"",
+            tabStyles:{
+                background:"#222",
+                color:"#fff",
+                activeButton:"#999"
+            },
+            effect:"slide/fade",
+            effectButton:"padrão/"
+        }
+        
+
+        el.appendChild(componentTab_002(screens02, options02));
+        // el.appendChild();
+
 
         $(".a").fadeIn().css({"display":"flex"});
 
@@ -210,7 +270,7 @@ function acordes(element, data, title){
     
     element.appendChild(a);
 
-    return true;
+    return element;
 
 }
 
