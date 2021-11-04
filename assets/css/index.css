@@ -266,6 +266,8 @@ body{
     margin-bottom: 5px;
     border-left: 7px solid #9609b6;
     border-radius: 5px;
+   
+    
 }
 
 .ap{
@@ -371,7 +373,8 @@ body{
     width: 100%;
     display: flex;
     flex-wrap: wrap;
-    display: none;
+    /* display: none; */
+    /* opacity: 0; */
 }
 
 .clns{
@@ -380,6 +383,8 @@ body{
     margin-bottom: 5px;
     border-left: 7px solid #9609b6;
     border-radius: 5px;
+
+    
 }
 
 
@@ -600,19 +605,25 @@ body{
     background: #9609b6;
 }
 
+@keyframes actTeste{
+    100%{
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
 .bxc{
     width: 100%;
     padding: 5px;
     color: #fff;
 }
 
-.sel{
-    display: none;
-}
+
 
 .bxs{
     width: 100%;
-    display: none;
+    /* opacity: 0; */
+    /* display: none; */
 }
 
 .acor{
@@ -623,7 +634,6 @@ body{
     width: 100%;
     height: 200px;
     background: crimson;
-    
 }
 
 .screen3{
@@ -632,8 +642,21 @@ body{
     background: #72b01d;
 }
 
+.sel{
+    display: none;
+    /* transition: 1s; */
+    /* opacity: 0; */
+}
+
 .bxc .activeScreen{
     display: block;
+    /* opacity: 1; */
+    opacity: 0;
+    transform: translateX(-10px);
+
+    animation-name: actTeste;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
 }
 
 .bxExer{
@@ -644,7 +667,7 @@ footer{
     position: absolute;
     bottom: 0px;
     width: 100%;
-    height: 100px;
+    height: 50px;
     background: #222;
     color: #fff;
     display: flex;
@@ -652,6 +675,77 @@ footer{
     justify-content: center;
     font-size: 0.8em;
 }
+
+
+
+/* Intrument  Component*/
+
+.bx{
+    width: 700px;
+    height: 300px;
+    background: chartreuse;
+}
+
+
+
+/* ---------------------- LOAD ---------------------- */
+
+
+
+.load{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.load-image{
+    width: 300px;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.load-image svg{
+    width: 200px;
+}
+
+.sv{
+    stroke-dasharray: 29000;
+    stroke-dashoffset: 29000;
+
+    animation-name: ani-sv;
+    animation-duration: 4s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes ani-sv{
+    100%{
+        stroke-dashoffset: 0;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

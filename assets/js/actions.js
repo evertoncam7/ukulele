@@ -102,7 +102,7 @@ function activeButtons(){
         bxScaleDescriptions.innerHTML = "Escalas";
 
         const pp = document.createElement("div");
-        pp.innerHTML = "Questionário";
+        pp.innerHTML = "Teste o seu conhecimento.";
 
         bxColumns.setAttribute("class", "bxColumns");
 
