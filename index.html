@@ -41,7 +41,7 @@
             </div>
             <div class="controll">
                 <div class="controll-2">
-                    <div data-category="inicio" class="title-controll">INÍCIO</div>
+                    <!-- <div data-category="inicio" class="title-controll">INÍCIO</div> -->
                     <div data-category="acordes" class="title-controll">ACORDES</div>
                     <div data-category="escalas" class="title-controll">ESCALAS</div>
                     <div data-category="notas" class="title-controll">NOTAS</div>
@@ -215,7 +215,10 @@ const testC = document.getElementById("testeComponent");
 // testC.appendChild(c3);
 
 setTimeout(function(){
-    $(".load").fadeOut();
+    $(".load").fadeOut(function(){
+        $(".container").fadeIn();
+        $("#main-2-id").animate({scrollLeft: 360 }, 500);
+    });
 }, 4000);
 
 
