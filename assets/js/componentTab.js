@@ -23,15 +23,6 @@ function componentDiv(cs, id, text, apd){
 
 }
 
-
-
-
-
-
-
-
-
-
 const texo1 = "Este componente foi testado!";
 
 const n4 = componentDiv(null, null, texo1);

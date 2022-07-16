@@ -58,15 +58,13 @@ function activeButtons(){
         el.appendChild(componentTab_002(screens01));
 
     }else if(data.category == 'acordes') {
+        
         el.innerHTML = "";
 
         const acordd2 = document.createElement("div");
         acordd2.setAttribute("class", "arc2")
 
-        // console.log(acordd2);
-
-        const s = acordes(acordd2, dataset.maior, "Maior");
-        // console.log(s);
+        acordes(acordd2, dataset.maior, "Maior");
         acordes(acordd2, dataset.menor, "Menor");
         acordes(acordd2, dataset.maiorSustenido, "Maior Sustenido");
         acordes(acordd2, dataset.menorSustenido, "Menor Sustenido");
@@ -93,8 +91,8 @@ function activeButtons(){
 
     }else if(data.category == 'escalas'){
 
-
         el.innerHTML = "";
+
 
         const bxColumns = document.createElement("div");
 
@@ -105,10 +103,84 @@ function activeButtons(){
         pp.innerHTML = "Teste o seu conhecimento.";
 
         bxColumns.setAttribute("class", "bxColumns");
+            const bxColumnsHeader = document.createElement("div");
+            bxColumnsHeader.setAttribute("class", "bxColumnsHeader");
 
-        escalasData.map(function(value, index){
-            escala(bxColumns, value);
-        });
+            const bxColumnsHeaderTab1 = document.createElement("div");
+            // bxColumnsHeaderTab1.innerHTML = "Tom";
+
+            const headerNotas = ['','C', 'D', 'E', 'F', 'G', 'A', 'B'];
+
+            const select1 = document.createElement("select");
+
+            headerNotas.forEach(function(r, i){
+                
+                const opton11 = document.createElement("option");
+                opton11.setAttribute("value", r);
+                opton11.innerHTML = r;
+
+                select1.appendChild(opton11)
+                bxColumnsHeaderTab1.appendChild(select1);
+
+            });
+
+            const bxColumnsHeaderTab2 = document.createElement("div");
+            // bxColumnsHeaderTab2.innerHTML = "#/b";
+                const select2 = document.createElement("select");
+                const opton21 = document.createElement("option");
+                opton21.setAttribute("value", "ESCOLHA");
+                opton21.innerHTML = "";
+
+                const accid = ['', '#', 'b'];
+
+                accid.forEach(function(r, i){
+                    const opton = document.createElement("option");
+                    opton.setAttribute("value", r);
+                    opton.innerHTML = r;
+
+                    select2.appendChild(opton);
+                });
+
+                bxColumnsHeaderTab2.appendChild(select2);
+
+            const bxColumnsHeaderTab3 = document.createElement("div");
+
+            const headerScale = [
+                '',
+                'Maior',
+                'Menor',
+                'Pentatônica maior',
+                'Pentatônica menor'
+            ];
+
+            const select3 = document.createElement("select");
+            headerScale.forEach(function(r, i){
+
+                const opton = document.createElement("option");
+                opton.setAttribute("value", r);
+                opton.innerHTML = r;
+
+                select3.appendChild(opton)
+                bxColumnsHeaderTab3.appendChild(select3);
+
+            });
+
+            // const bxColumnsHeaderTab4 = document.createElement("div");
+
+            
+            bxColumnsHeader.appendChild(bxColumnsHeaderTab1);
+            bxColumnsHeader.appendChild(bxColumnsHeaderTab2);
+            bxColumnsHeader.appendChild(bxColumnsHeaderTab3);
+            // bxColumnsHeader.appendChild(bxColumnsHeaderTab4);
+            
+            bxColumns.appendChild(bxColumnsHeader);
+
+
+        // Aqui é a listagem das notas antigas.
+
+        // escalasData.map(function(value, index){
+        //     escala(bxColumns, value);
+        // });
 
         const screensScale = [
             {
@@ -116,7 +188,7 @@ function activeButtons(){
                 component:bxColumns
             },
             {
-                title:"Dicas",
+                title:"GREGOS",
                 component:bxScaleDescriptions
             },
             {
